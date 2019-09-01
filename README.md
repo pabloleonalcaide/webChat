@@ -15,14 +15,17 @@ La arquitectura en el core de la aplicación sigue el patrón 'Convention over c
 ### Backend
 Nos dirigimos al directorio de la aplicación Rails y lanzamos el servidor, que escuchará por defecto desde el puerto 3000
 
-> cd webChat
-> rails server
-
+```bash
+cd webChat
+rails server
+```
 ### Frontend
 Nos dirigimos al directorio del proyecto de la aplicación Vue y lanzamos el servidor, que escuchará por defecto desde el puerto 8080
 
-> cd webChat
-> npm run dev
+```bash
+cd webChat
+npm run dev
+```
 
 ## Ejecución de Tests
 
