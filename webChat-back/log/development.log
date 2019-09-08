@@ -1,0 +1,1989 @@
+Started POST "/user" for 127.0.0.1 at 2019-08-07 19:50:32 +0200
+Processing by UserController#create as HTML
+Completed 500 Internal Server Error in 89ms (MongoDB: 0.0ms)
+
+
+  
+NoMethodError (undefined method `json' for #<UserController:0x000000047b2768>
+Did you mean?  json_response
+               JSON):
+  
+app/controllers/user_controller.rb:15:in `create'
+Started POST "/user" for 127.0.0.1 at 2019-08-07 19:54:11 +0200
+Processing by UserController#create as HTML
+Completed 500 Internal Server Error in 47ms (MongoDB: 0.0ms)
+
+
+  
+NoMethodError (undefined method `json' for #<UserController:0x00000005a2f378>
+Did you mean?  json_response
+               JSON):
+  
+app/controllers/user_controller.rb:15:in `create'
+Started POST "/user" for 127.0.0.1 at 2019-08-07 19:55:47 +0200
+Processing by UserController#create as HTML
+Completed 200 OK in 7ms (Views: 0.6ms | MongoDB: 0.0ms)
+
+
+Started POST "/user" for 127.0.0.1 at 2019-08-08 09:52:49 +0200
+Processing by UserController#create as HTML
+Completed 200 OK in 71ms (Views: 37.6ms | MongoDB: 0.0ms)
+
+
+Started POST "/user" for 127.0.0.1 at 2019-08-08 09:55:16 +0200
+Processing by UserController#create as HTML
+Completed 200 OK in 1ms (Views: 0.8ms | MongoDB: 0.0ms)
+
+
+Started POST "/user" for 127.0.0.1 at 2019-08-08 09:55:24 +0200
+Processing by UserController#create as HTML
+Completed 200 OK in 1ms (Views: 0.8ms | MongoDB: 0.0ms)
+
+
+Started POST "/user/" for 127.0.0.1 at 2019-08-08 10:22:00 +0200
+Processing by UserController#create as HTML
+  Parameters: {"name"=>"patata", "user"=>{"name"=>"patata"}}
+Completed 200 OK in 1ms (Views: 0.6ms | MongoDB: 0.0ms)
+
+
+Started POST "/user/" for 127.0.0.1 at 2019-08-08 11:32:07 +0200
+Processing by UserController#create as HTML
+  Parameters: {"name"=>"pablo", "user"=>{"name"=>"pablo"}}
+Completed 200 OK in 1ms (Views: 0.4ms | MongoDB: 0.0ms)
+
+
+Started POST "/user/" for 127.0.0.1 at 2019-08-08 12:03:03 +0200
+Processing by UserController#create as HTML
+  Parameters: {"user"=>{"name"=>"usuario"}}
+Completed 500 Internal Server Error in 236ms (MongoDB: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `user_params' for #<UserController:0x00000003b3be80>
+Did you mean?  user_path):
+  
+app/controllers/user_controller.rb:14:in `create'
+Started POST "/user/" for 127.0.0.1 at 2019-08-08 12:06:09 +0200
+Processing by UserController#create as HTML
+  Parameters: {"user"=>{"name"=>"usuario"}}
+Unpermitted parameter: :user
+Completed 500 Internal Server Error in 70ms (MongoDB: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `user' for #<UserController:0x000000046e0808>
+Did you mean?  @user):
+  
+app/controllers/user_controller.rb:15:in `create'
+Started POST "/user/" for 127.0.0.1 at 2019-08-08 12:07:12 +0200
+Processing by UserController#create as HTML
+  Parameters: {"user"=>{"name"=>"persona"}}
+Unpermitted parameter: :user
+MONGODB | EVENT: #<TopologyOpening topology=Unknown[]>
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | EVENT: #<TopologyChanged prev=Unknown[] new=Unknown[localhost:27017]>
+MONGODB | Topology type 'Unknown' changed to type 'Unknown'.
+MONGODB | EVENT: #<ServerOpening address=localhost:27017 topology=Unknown[localhost:27017]>
+MONGODB | Server localhost:27017 initializing.
+MONGODB | EVENT: #<ServerDescriptionChanged address=localhost:27017 topology=Single[localhost:27017] prev=#<Mongo::Server:Description:0x70106753648560 config={} average_round_trip_time=> new=#<Mongo::Server:Description:0x70106753676400 config={"ismaster"=>true, "maxBsonObjectSize"=>16777216, "maxMessageSizeBytes"=>48000000, "maxWriteBatchSize"=>1000, "localTime"=>2019-08-08 10:07:13 UTC, "maxWireVersion"=>5, "minWireVersion"=>0, "readOnly"=>false, "ok"=>1.0} average_round_trip_time=0.255094381>>
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | EVENT: #<TopologyChanged prev=Unknown[localhost:27017] new=Single[localhost:27017]>
+MONGODB | Topology type 'Unknown' changed to type 'Single'.
+MONGODB | localhost:27017 | web_chat_development.find | STARTED | {"find"=>"users", "filter"=>{"name"=>nil}, "projection"=>{"_id"=>1}, "limit"=>1}
+MONGODB | localhost:27017 | web_chat_development.find | SUCCEEDED | 0.080s
+Completed 200 OK in 507ms (Views: 0.4ms | MongoDB: 0.1ms)
+
+
+Started POST "/user/" for 127.0.0.1 at 2019-08-08 12:11:02 +0200
+Processing by UserController#create as HTML
+  Parameters: {"user"=>{"name"=>"persona1"}}
+Unpermitted parameter: :user
+MONGODB | EVENT: #<TopologyOpening topology=Unknown[]>
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | EVENT: #<TopologyChanged prev=Unknown[] new=Unknown[localhost:27017]>
+MONGODB | Topology type 'Unknown' changed to type 'Unknown'.
+MONGODB | EVENT: #<ServerOpening address=localhost:27017 topology=Unknown[localhost:27017]>
+MONGODB | Server localhost:27017 initializing.
+MONGODB | EVENT: #<ServerDescriptionChanged address=localhost:27017 topology=Single[localhost:27017] prev=#<Mongo::Server:Description:0x38490120 config={} average_round_trip_time=> new=#<Mongo::Server:Description:0x70023236248960 config={"ismaster"=>true, "maxBsonObjectSize"=>16777216, "maxMessageSizeBytes"=>48000000, "maxWriteBatchSize"=>1000, "localTime"=>2019-08-08 10:11:02 UTC, "maxWireVersion"=>5, "minWireVersion"=>0, "readOnly"=>false, "ok"=>1.0} average_round_trip_time=0.014500794>>
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | EVENT: #<TopologyChanged prev=Unknown[localhost:27017] new=Single[localhost:27017]>
+MONGODB | Topology type 'Unknown' changed to type 'Single'.
+MONGODB | localhost:27017 | web_chat_development.find | STARTED | {"find"=>"users", "filter"=>{"name"=>nil}, "projection"=>{"_id"=>1}, "limit"=>1}
+MONGODB | localhost:27017 | web_chat_development.find | SUCCEEDED | 0.000s
+Completed 200 OK in 24ms (Views: 0.4ms | MongoDB: 0.0ms)
+
+
+Started POST "/user/" for 127.0.0.1 at 2019-08-08 12:14:25 +0200
+Processing by UserController#create as HTML
+  Parameters: {"user"=>{"name"=>"persona2"}}
+Unpermitted parameter: :user
+MONGODB | localhost:27017 | web_chat_development.find | STARTED | {"find"=>"users", "filter"=>{"name"=>nil}, "projection"=>{"_id"=>1}, "limit"=>1}
+MONGODB | localhost:27017 | web_chat_development.find | SUCCEEDED | 0.000s
+Completed 500 Internal Server Error in 80ms (MongoDB: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `unprocessable_entity' for #<UserController:0x007f5f100d2f20>):
+  
+app/controllers/user_controller.rb:18:in `create'
+Started POST "/user/" for 127.0.0.1 at 2019-08-09 11:35:51 +0200
+Processing by UserController#create as HTML
+  Parameters: {"name"=>"pablo", "user"=>{"name"=>"pablo"}}
+Completed 500 Internal Server Error in 41ms (MongoDB: 0.0ms)
+
+
+  
+NoMethodError (undefined method `user?' for #<UserController:0x007fbd4037ba68>
+Did you mean?  user_url):
+  
+app/controllers/user_controller.rb:15:in `create'
+Started POST "/user/" for 127.0.0.1 at 2019-08-09 11:37:36 +0200
+Processing by UserController#create as HTML
+  Parameters: {"name"=>"pablo", "user"=>{"name"=>"pablo"}}
+Completed 500 Internal Server Error in 81ms (MongoDB: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `unprocessable_entity' for #<UserController:0x007f40a02fa138>):
+  
+app/controllers/user_controller.rb:19:in `create'
+Started POST "/user/" for 127.0.0.1 at 2019-08-09 11:40:24 +0200
+Processing by UserController#create as HTML
+  Parameters: {"name"=>"pablo", "user"=>{"name"=>"pablo"}}
+Completed 200 OK in 1ms (Views: 0.2ms | MongoDB: 0.0ms)
+
+
+Started POST "/user/" for 127.0.0.1 at 2019-08-09 11:40:32 +0200
+Processing by UserController#create as HTML
+  Parameters: {"name"=>"persona", "user"=>{"name"=>"persona"}}
+Completed 200 OK in 1ms (Views: 0.3ms | MongoDB: 0.0ms)
+
+
+Started POST "/user/" for 127.0.0.1 at 2019-08-09 11:40:36 +0200
+Processing by UserController#create as HTML
+  Parameters: {"name"=>"pablo", "user"=>{"name"=>"pablo"}}
+Completed 200 OK in 0ms (Views: 0.2ms | MongoDB: 0.0ms)
+
+
+Started POST "/user/" for 127.0.0.1 at 2019-08-09 11:47:25 +0200
+Processing by UserController#create as HTML
+  Parameters: {"name"=>"ramón", "user"=>{"name"=>"ramón"}}
+Entra => 
+Completed 500 Internal Server Error in 76ms (MongoDB: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `loger' for #<UserController:0x007f6388300758>
+Did you mean?  logger
+               logger=):
+  
+app/controllers/user_controller.rb:16:in `create'
+Started POST "/user/" for 127.0.0.1 at 2019-08-09 11:50:08 +0200
+Processing by UserController#create as HTML
+  Parameters: {"name"=>"patatas", "user"=>{"name"=>"patatas"}}
+Entra => patatas
+Completed 500 Internal Server Error in 75ms (MongoDB: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `data' for #<UserController:0x00000005969218>
+Did you mean?  @data):
+  
+app/controllers/user_controller.rb:15:in `create'
+Started POST "/user/" for 127.0.0.1 at 2019-08-09 11:50:44 +0200
+Processing by UserController#create as HTML
+  Parameters: {"name"=>"jamoncito", "user"=>{"name"=>"jamoncito"}}
+Entra => jamoncito
+Completed 500 Internal Server Error in 81ms (MongoDB: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `loger' for #<UserController:0x007fa68c304820>
+Did you mean?  logger
+               logger=):
+  
+app/controllers/user_controller.rb:16:in `create'
+Started POST "/user/" for 127.0.0.1 at 2019-08-09 11:51:16 +0200
+Processing by UserController#create as HTML
+  Parameters: {"name"=>"lechuga", "user"=>{"name"=>"lechuga"}}
+Entra => lechuga
+Respuesta cache read => 
+Completed 200 OK in 1ms (Views: 0.2ms | MongoDB: 0.0ms)
+
+
+Started POST "/user/" for 127.0.0.1 at 2019-08-09 11:51:31 +0200
+Processing by UserController#create as HTML
+  Parameters: {"name"=>"lechuga", "user"=>{"name"=>"lechuga"}}
+Entra => lechuga
+Respuesta cache read => lechuga
+Completed 200 OK in 1ms (Views: 0.3ms | MongoDB: 0.0ms)
+
+
+Started POST "/user/" for 127.0.0.1 at 2019-08-09 11:51:40 +0200
+Processing by UserController#create as HTML
+  Parameters: {"name"=>"lechuga", "user"=>{"name"=>"lechuga"}}
+Entra => lechuga
+Respuesta cache read => lechuga
+Completed 200 OK in 1ms (Views: 0.2ms | MongoDB: 0.0ms)
+
+
+Started POST "/user/" for 127.0.0.1 at 2019-08-09 11:51:40 +0200
+Processing by UserController#create as HTML
+  Parameters: {"name"=>"lechuga", "user"=>{"name"=>"lechuga"}}
+Entra => lechuga
+Respuesta cache read => lechuga
+Completed 200 OK in 1ms (Views: 0.3ms | MongoDB: 0.0ms)
+
+
+Started POST "/user/" for 127.0.0.1 at 2019-08-09 11:56:07 +0200
+Processing by UserController#create as HTML
+  Parameters: {"name"=>"qwerty", "user"=>{"name"=>"qwerty"}}
+Entra => qwerty
+Respuesta cache read => 
+Completed 200 OK in 1ms (Views: 0.3ms | MongoDB: 0.0ms)
+
+
+Started POST "/user/" for 127.0.0.1 at 2019-08-09 11:56:21 +0200
+Processing by UserController#create as HTML
+  Parameters: {"name"=>"qwerty", "user"=>{"name"=>"qwerty"}}
+Entra => qwerty
+Respuesta cache read => qwerty
+Completed 200 OK in 1ms (Views: 0.3ms | MongoDB: 0.0ms)
+
+
+Started POST "/user/" for 127.0.0.1 at 2019-08-09 11:57:09 +0200
+Processing by UserController#create as HTML
+  Parameters: {"name"=>"lola", "user"=>{"name"=>"lola"}}
+Entra => lola
+Respuesta cache read => 
+Completed 200 OK in 1ms (Views: 0.2ms | MongoDB: 0.0ms)
+
+
+Started POST "/user/" for 127.0.0.1 at 2019-08-09 11:57:39 +0200
+Processing by UserController#create as HTML
+  Parameters: {"name"=>"carlos", "user"=>{"name"=>"carlos"}}
+Entra => carlos
+Respuesta cache read => 
+Completed 200 OK in 0ms (Views: 0.2ms | MongoDB: 0.0ms)
+
+
+Started POST "/user/" for 127.0.0.1 at 2019-08-09 11:57:54 +0200
+Processing by UserController#create as HTML
+  Parameters: {"name"=>"jacinto", "user"=>{"name"=>"jacinto"}}
+Entra => jacinto
+Respuesta cache read => 
+Completed 200 OK in 1ms (Views: 0.3ms | MongoDB: 0.0ms)
+
+
+Started POST "/user/" for 127.0.0.1 at 2019-08-09 11:58:15 +0200
+Processing by UserController#create as HTML
+  Parameters: {"name"=>"lola", "user"=>{"name"=>"lola"}}
+Entra => lola
+Respuesta cache read => lola
+Completed 200 OK in 0ms (Views: 0.2ms | MongoDB: 0.0ms)
+
+
+Started POST "/user/" for 127.0.0.1 at 2019-08-09 11:58:18 +0200
+Processing by UserController#create as HTML
+  Parameters: {"name"=>"lola", "user"=>{"name"=>"lola"}}
+Entra => lola
+Respuesta cache read => lola
+Completed 200 OK in 1ms (Views: 0.3ms | MongoDB: 0.0ms)
+
+
+Started POST "/user/" for 127.0.0.1 at 2019-08-09 11:58:31 +0200
+Processing by UserController#create as HTML
+  Parameters: {"name"=>"lola", "user"=>{"name"=>"lola"}}
+Entra => lola
+Respuesta cache read => lola
+Completed 200 OK in 1ms (Views: 0.2ms | MongoDB: 0.0ms)
+
+
+Started POST "/user/" for 127.0.0.1 at 2019-08-09 11:58:58 +0200
+Processing by UserController#create as HTML
+  Parameters: {"name"=>"lola", "user"=>{"name"=>"lola"}}
+Entra => lola
+Respuesta cache read => lola
+Completed 200 OK in 1ms (Views: 0.2ms | MongoDB: 0.0ms)
+
+
+Started POST "/user/" for 127.0.0.1 at 2019-08-09 11:59:23 +0200
+Processing by UserController#create as HTML
+  Parameters: {"name"=>"lola", "user"=>{"name"=>"lola"}}
+Entra => lola
+Respuesta cache read => lola
+Completed 200 OK in 1ms (Views: 0.3ms | MongoDB: 0.0ms)
+
+
+Started POST "/user/" for 127.0.0.1 at 2019-08-09 11:59:37 +0200
+Processing by UserController#create as HTML
+  Parameters: {"name"=>"lola", "user"=>{"name"=>"lola"}}
+Entra => lola
+Respuesta cache read => lola
+Completed 200 OK in 1ms (Views: 0.3ms | MongoDB: 0.0ms)
+
+
+Started POST "/user/" for 127.0.0.1 at 2019-08-09 11:59:45 +0200
+Processing by UserController#create as HTML
+  Parameters: {"name"=>"lola", "user"=>{"name"=>"lola"}}
+Entra => lola
+Respuesta cache read => lola
+Completed 200 OK in 1ms (Views: 0.3ms | MongoDB: 0.0ms)
+
+
+Started POST "/user/" for 127.0.0.1 at 2019-08-09 11:59:54 +0200
+Processing by UserController#create as HTML
+  Parameters: {"name"=>"jacinto", "user"=>{"name"=>"jacinto"}}
+Entra => jacinto
+Respuesta cache read => jacinto
+Completed 200 OK in 1ms (Views: 0.3ms | MongoDB: 0.0ms)
+
+
+Started POST "/user/" for 127.0.0.1 at 2019-08-09 12:00:24 +0200
+Processing by UserController#create as HTML
+  Parameters: {"name"=>"lola", "user"=>{"name"=>"lola"}}
+Entra => lola
+Respuesta cache read => lola
+Completed 200 OK in 1ms (Views: 0.2ms | MongoDB: 0.0ms)
+
+
+Started POST "/user/" for 127.0.0.1 at 2019-08-09 12:00:51 +0200
+Processing by UserController#create as HTML
+  Parameters: {"name"=>"lola", "user"=>{"name"=>"lola"}}
+Entra => lola
+Respuesta cache read => lola
+Completed 200 OK in 1ms (Views: 0.3ms | MongoDB: 0.0ms)
+
+
+Started POST "/user/" for 127.0.0.1 at 2019-08-09 12:01:20 +0200
+Processing by UserController#create as HTML
+  Parameters: {"name"=>"lola", "user"=>{"name"=>"lola"}}
+Entra => lola
+Respuesta cache read => lola
+Completed 200 OK in 1ms (Views: 0.3ms | MongoDB: 0.0ms)
+
+
+Started POST "/user/" for 127.0.0.1 at 2019-08-09 12:02:19 +0200
+Processing by UserController#create as HTML
+  Parameters: {"name"=>"lola", "user"=>{"name"=>"lola"}}
+Entra => lola
+Respuesta cache read => lola
+Completed 200 OK in 1ms (Views: 0.2ms | MongoDB: 0.0ms)
+
+
+Started POST "/user/" for 127.0.0.1 at 2019-08-09 12:05:37 +0200
+Processing by UserController#create as HTML
+  Parameters: {"name"=>"lola", "user"=>{"name"=>"lola"}}
+Entra => lola
+Respuesta cache read => lola
+Completed 200 OK in 1ms (Views: 0.4ms | MongoDB: 0.0ms)
+
+
+Started POST "/user/" for 127.0.0.1 at 2019-08-09 12:06:07 +0200
+Processing by UserController#create as HTML
+  Parameters: {"name"=>"lola", "user"=>{"name"=>"lola"}}
+Entra => lola
+Respuesta cache read => lola
+Completed 200 OK in 1ms (Views: 0.4ms | MongoDB: 0.0ms)
+
+
+Started POST "/user/" for 127.0.0.1 at 2019-08-09 12:06:14 +0200
+Processing by UserController#create as HTML
+  Parameters: {"name"=>"lola", "user"=>{"name"=>"lola"}}
+Entra => lola
+Respuesta cache read => lola
+Completed 200 OK in 1ms (Views: 0.3ms | MongoDB: 0.0ms)
+
+
+Started POST "/user/" for 127.0.0.1 at 2019-08-09 12:06:23 +0200
+Processing by UserController#create as HTML
+  Parameters: {"name"=>"patatas", "user"=>{"name"=>"patatas"}}
+Entra => patatas
+Respuesta cache read => 
+Completed 200 OK in 1ms (Views: 0.3ms | MongoDB: 0.0ms)
+
+
+Started POST "/user/" for 127.0.0.1 at 2019-08-09 12:07:28 +0200
+Processing by UserController#create as HTML
+  Parameters: {"name"=>"patatin", "user"=>{"name"=>"patatin"}}
+Entra => patatin
+Respuesta cache read => 
+Completed 200 OK in 1ms (Views: 0.3ms | MongoDB: 0.0ms)
+
+
+Started POST "/user/" for 127.0.0.1 at 2019-08-09 12:07:34 +0200
+Processing by UserController#create as HTML
+  Parameters: {"name"=>"patatin", "user"=>{"name"=>"patatin"}}
+Entra => patatin
+Respuesta cache read => 
+Completed 200 OK in 1ms (Views: 0.4ms | MongoDB: 0.0ms)
+
+
+Started POST "/user/" for 127.0.0.1 at 2019-08-09 12:11:23 +0200
+Processing by UserController#create as HTML
+  Parameters: {"name"=>"hola", "user"=>{"name"=>"hola"}}
+Entra => hola
+Respuesta cache read => 
+Completed 200 OK in 1ms (Views: 0.3ms | MongoDB: 0.0ms)
+
+
+Started POST "/user/" for 127.0.0.1 at 2019-08-09 12:11:27 +0200
+Processing by UserController#create as HTML
+  Parameters: {"name"=>"hola", "user"=>{"name"=>"hola"}}
+Entra => hola
+Respuesta cache read => 
+Completed 200 OK in 0ms (Views: 0.2ms | MongoDB: 0.0ms)
+
+
+Started POST "/user/" for 127.0.0.1 at 2019-08-09 12:11:30 +0200
+Processing by UserController#create as HTML
+  Parameters: {"name"=>"hola", "user"=>{"name"=>"hola"}}
+Entra => hola
+Respuesta cache read => 
+Completed 200 OK in 1ms (Views: 0.4ms | MongoDB: 0.0ms)
+
+
+Started POST "/user/" for 127.0.0.1 at 2019-08-09 12:11:40 +0200
+Processing by UserController#create as HTML
+  Parameters: {"name"=>"hola2", "user"=>{"name"=>"hola2"}}
+Entra => hola2
+Respuesta cache read => 
+Completed 200 OK in 1ms (Views: 0.3ms | MongoDB: 0.0ms)
+
+
+Started POST "/user/" for 127.0.0.1 at 2019-08-09 12:11:44 +0200
+Processing by UserController#create as HTML
+  Parameters: {"name"=>"hola", "user"=>{"name"=>"hola"}}
+Entra => hola
+Respuesta cache read => 
+Completed 200 OK in 1ms (Views: 0.2ms | MongoDB: 0.0ms)
+
+
+Started POST "/user/" for 127.0.0.1 at 2019-08-09 12:12:31 +0200
+Processing by UserController#create as HTML
+  Parameters: {"name"=>"persona", "user"=>{"name"=>"persona"}}
+Entra => persona
+Respuesta cache read => 
+Completed 200 OK in 1ms (Views: 0.3ms | MongoDB: 0.0ms)
+
+
+Started POST "/user/" for 127.0.0.1 at 2019-08-09 12:12:38 +0200
+Processing by UserController#create as HTML
+  Parameters: {"name"=>"persona1", "user"=>{"name"=>"persona1"}}
+Entra => persona1
+Respuesta cache read => 
+Completed 200 OK in 1ms (Views: 0.3ms | MongoDB: 0.0ms)
+
+
+Started POST "/user/" for 127.0.0.1 at 2019-08-09 12:12:43 +0200
+Processing by UserController#create as HTML
+  Parameters: {"name"=>"persona", "user"=>{"name"=>"persona"}}
+Entra => persona
+Respuesta cache read => 
+Completed 200 OK in 1ms (Views: 0.3ms | MongoDB: 0.0ms)
+
+
+Started POST "/user/" for 127.0.0.1 at 2019-08-09 12:15:05 +0200
+Processing by UserController#create as HTML
+  Parameters: {"name"=>"patata", "user"=>{"name"=>"patata"}}
+Entra => patata
+Respuesta cache read => 
+Completed 200 OK in 1ms (Views: 0.3ms | MongoDB: 0.0ms)
+
+
+Started POST "/user/" for 127.0.0.1 at 2019-08-09 12:15:09 +0200
+Processing by UserController#create as HTML
+  Parameters: {"name"=>"patata", "user"=>{"name"=>"patata"}}
+Entra => patata
+Respuesta cache read => 
+Completed 200 OK in 1ms (Views: 0.4ms | MongoDB: 0.0ms)
+
+
+Started POST "/user/" for 127.0.0.1 at 2019-08-09 12:15:16 +0200
+Processing by UserController#create as HTML
+  Parameters: {"name"=>"lola", "user"=>{"name"=>"lola"}}
+Entra => lola
+Respuesta cache read => 
+Completed 200 OK in 1ms (Views: 0.2ms | MongoDB: 0.0ms)
+
+
+Started POST "/user/" for 127.0.0.1 at 2019-08-09 12:15:21 +0200
+Processing by UserController#create as HTML
+  Parameters: {"name"=>"pablo", "user"=>{"name"=>"pablo"}}
+Entra => pablo
+Respuesta cache read => 
+Completed 200 OK in 1ms (Views: 0.5ms | MongoDB: 0.0ms)
+
+
+Started POST "/user/" for 127.0.0.1 at 2019-08-09 12:20:59 +0200
+Processing by UserController#create as HTML
+  Parameters: {"name"=>"pablo1234", "user"=>{"name"=>"pablo1234"}}
+Entra => pablo1234
+Respuesta cache read => 
+Completed 500 Internal Server Error in 2ms (MongoDB: 0.0ms)
+
+
+  
+NoMethodError (undefined method `empty?' for nil:NilClass):
+  
+app/controllers/user_controller.rb:17:in `create'
+Started POST "/user/" for 127.0.0.1 at 2019-08-09 12:21:56 +0200
+Processing by UserController#create as HTML
+  Parameters: {"name"=>"lolo", "user"=>{"name"=>"lolo"}}
+Entra => lolo
+Respuesta cache read => 
+blank, nil, present => true // true // false
+Completed 200 OK in 1ms (Views: 0.3ms | MongoDB: 0.0ms)
+
+
+Started POST "/user/" for 127.0.0.1 at 2019-08-09 12:22:11 +0200
+Processing by UserController#create as HTML
+  Parameters: {"name"=>"lolo", "user"=>{"name"=>"lolo"}}
+Entra => lolo
+Respuesta cache read => lolo
+blank, nil, present => false // false // true
+Completed 200 OK in 1ms (Views: 0.3ms | MongoDB: 0.0ms)
+
+
+Started POST "/user/" for 127.0.0.1 at 2019-08-12 19:31:18 +0200
+Processing by UserController#create as HTML
+  Parameters: {"name"=>"Pablo", "user"=>{"name"=>"Pablo"}}
+Entra => Pablo
+Respuesta cache read => 
+Completed 200 OK in 1ms (Views: 0.2ms | MongoDB: 0.0ms)
+
+
+Started POST "/user/" for 127.0.0.1 at 2019-08-12 19:31:30 +0200
+Processing by UserController#create as HTML
+  Parameters: {"name"=>"Laura", "user"=>{"name"=>"Laura"}}
+Entra => Laura
+Respuesta cache read => 
+Completed 200 OK in 1ms (Views: 0.2ms | MongoDB: 0.0ms)
+
+
+Started POST "/user/" for 127.0.0.1 at 2019-08-12 19:31:37 +0200
+Processing by UserController#create as HTML
+  Parameters: {"name"=>"Pablo", "user"=>{"name"=>"Pablo"}}
+Entra => Pablo
+Respuesta cache read => Pablo
+Completed 200 OK in 1ms (Views: 0.3ms | MongoDB: 0.0ms)
+
+
+Started POST "/user/" for 127.0.0.1 at 2019-08-12 19:32:46 +0200
+Processing by UserController#create as HTML
+  Parameters: {"name"=>"Pablo", "user"=>{"name"=>"Pablo"}}
+Entra => Pablo
+Respuesta cache read => 
+Completed 200 OK in 1ms (Views: 0.3ms | MongoDB: 0.0ms)
+
+
+Started POST "/user/" for 127.0.0.1 at 2019-08-12 19:32:52 +0200
+Processing by UserController#create as HTML
+  Parameters: {"name"=>"Laura", "user"=>{"name"=>"Laura"}}
+Entra => Laura
+Respuesta cache read => 
+Completed 200 OK in 1ms (Views: 0.2ms | MongoDB: 0.0ms)
+
+
+Started POST "/user/" for 127.0.0.1 at 2019-08-12 19:32:57 +0200
+Processing by UserController#create as HTML
+  Parameters: {"name"=>"Pablo", "user"=>{"name"=>"Pablo"}}
+Entra => Pablo
+Respuesta cache read => Pablo
+Completed 200 OK in 1ms (Views: 0.3ms | MongoDB: 0.0ms)
+
+
+Started POST "/user/" for 127.0.0.1 at 2019-08-12 19:36:28 +0200
+Processing by UserController#create as HTML
+  Parameters: {"name"=>"Pablo", "user"=>{"name"=>"Pablo"}}
+Entra => Pablo
+Respuesta cache read => 
+False
+Completed 200 OK in 1ms (Views: 0.2ms | MongoDB: 0.0ms)
+
+
+Started POST "/user/" for 127.0.0.1 at 2019-08-12 19:36:34 +0200
+Processing by UserController#create as HTML
+  Parameters: {"name"=>"Laura", "user"=>{"name"=>"Laura"}}
+Entra => Laura
+Respuesta cache read => 
+False
+Completed 200 OK in 1ms (Views: 0.4ms | MongoDB: 0.0ms)
+
+
+Started POST "/user/" for 127.0.0.1 at 2019-08-12 19:36:38 +0200
+Processing by UserController#create as HTML
+  Parameters: {"name"=>"Pablo", "user"=>{"name"=>"Pablo"}}
+Entra => Pablo
+Respuesta cache read => Pablo
+True
+Completed 200 OK in 1ms (Views: 0.4ms | MongoDB: 0.0ms)
+
+
+Started POST "/user/" for 127.0.0.1 at 2019-08-12 19:36:39 +0200
+Processing by UserController#create as HTML
+  Parameters: {"name"=>"Pablo", "user"=>{"name"=>"Pablo"}}
+Entra => Pablo
+Respuesta cache read => Pablo
+True
+Completed 200 OK in 1ms (Views: 0.4ms | MongoDB: 0.0ms)
+
+
+Started POST "/user/" for 127.0.0.1 at 2019-08-12 19:36:47 +0200
+Processing by UserController#create as HTML
+  Parameters: {"name"=>"Pablo", "user"=>{"name"=>"Pablo"}}
+Entra => Pablo
+Respuesta cache read => Pablo
+True
+Completed 200 OK in 1ms (Views: 0.4ms | MongoDB: 0.0ms)
+
+
+Started POST "/user/" for 127.0.0.1 at 2019-08-12 19:39:18 +0200
+Processing by UserController#create as HTML
+  Parameters: {"name"=>"Pablo", "user"=>{"name"=>"Pablo"}}
+Entra => Pablo
+Respuesta cache read => Pablo
+True
+Completed 200 OK in 1ms (Views: 0.3ms | MongoDB: 0.0ms)
+
+
+Started POST "/user/" for 127.0.0.1 at 2019-08-12 19:39:33 +0200
+Processing by UserController#create as HTML
+  Parameters: {"name"=>"pa", "user"=>{"name"=>"pa"}}
+Entra => pa
+Respuesta cache read => 
+False
+Completed 200 OK in 1ms (Views: 0.2ms | MongoDB: 0.0ms)
+
+
+Started POST "/user/" for 127.0.0.1 at 2019-08-12 19:39:38 +0200
+Processing by UserController#create as HTML
+  Parameters: {"name"=>"Pablo", "user"=>{"name"=>"Pablo"}}
+Entra => Pablo
+Respuesta cache read => Pablo
+True
+Completed 200 OK in 1ms (Views: 0.3ms | MongoDB: 0.0ms)
+
+
+Started POST "/user/" for 127.0.0.1 at 2019-08-12 19:40:19 +0200
+Processing by UserController#create as HTML
+  Parameters: {"name"=>"Pablo", "user"=>{"name"=>"Pablo"}}
+Entra => Pablo
+Respuesta cache read => 
+False
+Completed 200 OK in 1ms (Views: 0.6ms | MongoDB: 0.0ms)
+
+
+Started POST "/user/" for 127.0.0.1 at 2019-08-12 19:40:47 +0200
+Processing by UserController#create as HTML
+  Parameters: {"name"=>"Pablo", "user"=>{"name"=>"Pablo"}}
+Entra => Pablo
+Respuesta cache read => 
+False
+Completed 200 OK in 1ms (Views: 0.2ms | MongoDB: 0.0ms)
+
+
+Started POST "/user/" for 127.0.0.1 at 2019-08-12 19:40:50 +0200
+Processing by UserController#create as HTML
+  Parameters: {"name"=>"Pablo", "user"=>{"name"=>"Pablo"}}
+Entra => Pablo
+Respuesta cache read => Pablo
+True
+Completed 200 OK in 1ms (Views: 0.3ms | MongoDB: 0.0ms)
+
+
+Started POST "/user/" for 127.0.0.1 at 2019-08-12 19:43:21 +0200
+Processing by UserController#create as HTML
+  Parameters: {"name"=>"Pablo", "user"=>{"name"=>"Pablo"}}
+Entra => Pablo
+Respuesta cache read => Pablo
+True
+Completed 200 OK in 1ms (Views: 0.4ms | MongoDB: 0.0ms)
+
+
+Started POST "/user/" for 127.0.0.1 at 2019-08-12 19:43:23 +0200
+Processing by UserController#create as HTML
+  Parameters: {"name"=>"Pablo", "user"=>{"name"=>"Pablo"}}
+Entra => Pablo
+Respuesta cache read => Pablo
+True
+Completed 200 OK in 1ms (Views: 0.3ms | MongoDB: 0.0ms)
+
+
+Started POST "/user/" for 127.0.0.1 at 2019-08-12 19:44:26 +0200
+Processing by UserController#create as HTML
+  Parameters: {"name"=>"Pablo", "user"=>{"name"=>"Pablo"}}
+Entra => Pablo
+Respuesta cache read => Pablo
+True
+Completed 200 OK in 1ms (Views: 0.3ms | MongoDB: 0.0ms)
+
+
+Started POST "/user/" for 127.0.0.1 at 2019-08-12 19:44:30 +0200
+Processing by UserController#create as HTML
+  Parameters: {"name"=>"Pablo", "user"=>{"name"=>"Pablo"}}
+Entra => Pablo
+Respuesta cache read => Pablo
+True
+Completed 200 OK in 1ms (Views: 0.2ms | MongoDB: 0.0ms)
+
+
+Started POST "/user/" for 127.0.0.1 at 2019-08-12 19:45:13 +0200
+Processing by UserController#create as HTML
+  Parameters: {"name"=>"p", "user"=>{"name"=>"p"}}
+Entra => p
+Respuesta cache read => 
+False
+Completed 200 OK in 1ms (Views: 0.3ms | MongoDB: 0.0ms)
+
+
+Started POST "/user/" for 127.0.0.1 at 2019-08-12 19:45:17 +0200
+Processing by UserController#create as HTML
+  Parameters: {"name"=>"p", "user"=>{"name"=>"p"}}
+Entra => p
+Respuesta cache read => p
+True
+Completed 200 OK in 1ms (Views: 0.4ms | MongoDB: 0.0ms)
+
+
+Started POST "/user/" for 127.0.0.1 at 2019-08-12 19:45:40 +0200
+Processing by UserController#create as HTML
+  Parameters: {"name"=>"q", "user"=>{"name"=>"q"}}
+Entra => q
+Respuesta cache read => 
+False
+Completed 200 OK in 1ms (Views: 0.2ms | MongoDB: 0.0ms)
+
+
+Started POST "/user/" for 127.0.0.1 at 2019-08-12 19:46:23 +0200
+Processing by UserController#create as HTML
+  Parameters: {"name"=>"j", "user"=>{"name"=>"j"}}
+Entra => j
+Respuesta cache read => 
+False
+Completed 200 OK in 1ms (Views: 0.3ms | MongoDB: 0.0ms)
+
+
+Started POST "/user/" for 127.0.0.1 at 2019-08-12 19:46:27 +0200
+Processing by UserController#create as HTML
+  Parameters: {"name"=>"j", "user"=>{"name"=>"j"}}
+Entra => j
+Respuesta cache read => j
+True
+Completed 200 OK in 1ms (Views: 0.4ms | MongoDB: 0.0ms)
+
+
+Started POST "/user/" for 127.0.0.1 at 2019-08-12 19:46:48 +0200
+Processing by UserController#create as HTML
+  Parameters: {"name"=>"q", "user"=>{"name"=>"q"}}
+Entra => q
+Respuesta cache read => q
+True
+Completed 200 OK in 1ms (Views: 0.3ms | MongoDB: 0.0ms)
+
+
+Started POST "/user/" for 127.0.0.1 at 2019-08-12 19:46:51 +0200
+Processing by UserController#create as HTML
+  Parameters: {"name"=>"q", "user"=>{"name"=>"q"}}
+Entra => q
+Respuesta cache read => q
+True
+Completed 200 OK in 1ms (Views: 0.4ms | MongoDB: 0.0ms)
+
+
+Started POST "/user/" for 127.0.0.1 at 2019-08-12 19:46:55 +0200
+Processing by UserController#create as HTML
+  Parameters: {"name"=>"qz", "user"=>{"name"=>"qz"}}
+Entra => qz
+Respuesta cache read => 
+False
+Completed 200 OK in 1ms (Views: 0.3ms | MongoDB: 0.0ms)
+
+
+Started POST "/user/" for 127.0.0.1 at 2019-08-12 19:47:18 +0200
+Processing by UserController#create as HTML
+  Parameters: {"name"=>"paco", "user"=>{"name"=>"paco"}}
+Entra => paco
+Respuesta cache read => 
+False
+Completed 200 OK in 0ms (Views: 0.2ms | MongoDB: 0.0ms)
+
+
+Started POST "/user/" for 127.0.0.1 at 2019-08-12 19:47:26 +0200
+Processing by UserController#create as HTML
+  Parameters: {"name"=>"paco", "user"=>{"name"=>"paco"}}
+Entra => paco
+Respuesta cache read => paco
+True
+Completed 200 OK in 1ms (Views: 0.2ms | MongoDB: 0.0ms)
+
+
+Started POST "/user/" for 127.0.0.1 at 2019-08-12 19:47:44 +0200
+Processing by UserController#create as HTML
+  Parameters: {"name"=>"pacoq", "user"=>{"name"=>"pacoq"}}
+Entra => pacoq
+Respuesta cache read => 
+False
+Completed 200 OK in 1ms (Views: 0.2ms | MongoDB: 0.0ms)
+
+
+Started POST "/user/" for 127.0.0.1 at 2019-08-12 19:47:57 +0200
+Processing by UserController#create as HTML
+  Parameters: {"name"=>"pacoq", "user"=>{"name"=>"pacoq"}}
+Entra => pacoq
+Respuesta cache read => pacoq
+True
+Completed 200 OK in 1ms (Views: 0.2ms | MongoDB: 0.0ms)
+
+
+Started POST "/" for ::1 at 2019-08-18 11:07:13 +0200
+  
+ActionController::RoutingError (No route matches [POST] "/"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/user" for ::1 at 2019-08-18 11:07:41 +0200
+  
+LoadError (Unable to autoload constant UserPostController, expected /home/pablo/Escritorio/webChat_project/webChat/app/controllers/user_post_controller.rb to define it):
+  
+activesupport (5.2.3) lib/active_support/dependencies.rb:511:in `load_missing_constant'
+bootsnap (1.4.4) lib/bootsnap/load_path_cache/core_ext/active_support.rb:60:in `block in load_missing_constant'
+bootsnap (1.4.4) lib/bootsnap/load_path_cache/core_ext/active_support.rb:16:in `allow_bootsnap_retry'
+bootsnap (1.4.4) lib/bootsnap/load_path_cache/core_ext/active_support.rb:59:in `load_missing_constant'
+activesupport (5.2.3) lib/active_support/dependencies.rb:195:in `const_missing'
+activesupport (5.2.3) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.3) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.3) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.3) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.3) lib/active_support/inflector/methods.rb:281:in `constantize'
+activesupport (5.2.3) lib/active_support/dependencies.rb:582:in `get'
+activesupport (5.2.3) lib/active_support/dependencies.rb:613:in `constantize'
+actionpack (5.2.3) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.3) lib/action_dispatch/http/parameters.rb:101:in `binary_params_for?'
+actionpack (5.2.3) lib/action_dispatch/http/parameters.rb:92:in `set_binary_encoding'
+actionpack (5.2.3) lib/action_dispatch/http/parameters.rb:69:in `path_parameters='
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/user" for ::1 at 2019-08-18 11:08:48 +0200
+Processing by UserPostController#create as */*
+  Parameters: {"name"=>"pablo"}
+Completed 200 OK in 1ms (Views: 0.3ms | MongoDB: 0.0ms)
+
+
+Started POST "/user" for ::1 at 2019-08-18 11:09:33 +0200
+Processing by UserPostController#create as */*
+  Parameters: {"name"=>"pablo"}
+Completed 200 OK in 0ms (Views: 0.2ms | MongoDB: 0.0ms)
+
+
+Started POST "/user" for ::1 at 2019-08-18 11:10:45 +0200
+Processing by UserPostController#create as */*
+  Parameters: {"name"=>"pablo"}
+Completed 200 OK in 1ms (Views: 0.4ms | MongoDB: 0.0ms)
+
+
+Started POST "/user" for ::1 at 2019-08-18 12:10:38 +0200
+Processing by UserPostController#create as */*
+  Parameters: {"name"=>"pablo"}
+Completed 200 OK in 0ms (Views: 0.2ms | MongoDB: 0.0ms)
+
+
+Started POST "/user" for ::1 at 2019-08-18 12:10:42 +0200
+Processing by UserPostController#create as */*
+  Parameters: {"name"=>"pablo"}
+Completed 200 OK in 0ms (Views: 0.2ms | MongoDB: 0.0ms)
+
+
+Started POST "/user" for ::1 at 2019-08-18 12:11:13 +0200
+Processing by UserPostController#create as */*
+  Parameters: {"name"=>"pablo"}
+Completed 200 OK in 0ms (Views: 0.2ms | MongoDB: 0.0ms)
+
+
+Started POST "/user" for ::1 at 2019-08-18 12:12:11 +0200
+Processing by UserPostController#create as */*
+  Parameters: {"name"=>"pablo"}
+Completed 200 OK in 1ms (Views: 0.4ms | MongoDB: 0.0ms)
+
+
+Started POST "/user" for ::1 at 2019-08-18 12:12:13 +0200
+Processing by UserPostController#create as */*
+  Parameters: {"name"=>"pablo"}
+Completed 200 OK in 0ms (Views: 0.2ms | MongoDB: 0.0ms)
+
+
+Started POST "/user" for ::1 at 2019-08-18 12:17:23 +0200
+Processing by UserPostController#create as */*
+  Parameters: {"name"=>"pablo"}
+Completed 500 Internal Server Error in 1ms (MongoDB: 0.0ms)
+
+
+  
+NameError (uninitialized constant UserPostController::Errors):
+  
+app/controllers/user_post_controller.rb:10:in `rescue in create'
+app/controllers/user_post_controller.rb:6:in `create'
+Started POST "/user" for ::1 at 2019-08-18 12:37:48 +0200
+  
+LoadError (cannot load such file -- UserExist):
+  
+app/controllers/user_post_controller.rb:1:in `<main>'
+Started POST "/user" for ::1 at 2019-08-18 12:38:26 +0200
+  
+LoadError (cannot load such file -- userExist.rb):
+  
+app/controllers/user_post_controller.rb:1:in `<main>'
+Started POST "/user" for ::1 at 2019-08-18 12:40:27 +0200
+  
+LoadError (cannot load such file -- ../../lib/errors/userExist):
+  
+app/controllers/user_post_controller.rb:1:in `<main>'
+Started POST "/user" for ::1 at 2019-08-18 12:47:58 +0200
+Processing by UserPostController#create as */*
+  Parameters: {"name"=>"pablo"}
+Completed 500 Internal Server Error in 43ms (MongoDB: 0.0ms)
+
+
+  
+NoMethodError (undefined method `create_user_service' for #<UserPostController:0x00000004397d18>):
+  
+app/controllers/user_post_controller.rb:9:in `create'
+Started POST "/user" for ::1 at 2019-08-18 12:48:27 +0200
+  
+ActionController::RoutingError (uninitialized constant UserPostController::CreateUserService):
+  
+app/controllers/user_post_controller.rb:3:in `<class:UserPostController>'
+app/controllers/user_post_controller.rb:2:in `<main>'
+Started POST "/user" for ::1 at 2019-08-18 12:49:44 +0200
+  
+LoadError (cannot load such file -- .app/services/createUserService):
+  
+app/controllers/user_post_controller.rb:2:in `<main>'
+Started POST "/user" for ::1 at 2019-08-18 12:49:59 +0200
+  
+LoadError (cannot load such file -- /home/pablo/Escritorio/webChat_project/webChat/app/services/createUserService):
+  
+app/controllers/user_post_controller.rb:2:in `<main>'
+Started POST "/user" for ::1 at 2019-08-18 12:50:25 +0200
+  
+LoadError (cannot load such file -- /home/pablo/Escritorio/webChat_project/webChat/app/services/create_user_service):
+  
+app/controllers/user_post_controller.rb:2:in `<main>'
+Started POST "/user" for ::1 at 2019-08-18 12:51:00 +0200
+  
+LoadError (cannot load such file -- /home/pablo/Escritorio/webChat_project/webChat/app/services/CreateUserService):
+  
+app/controllers/user_post_controller.rb:2:in `<main>'
+Started POST "/user" for ::1 at 2019-08-18 12:51:27 +0200
+  
+LoadError (cannot load such file -- /home/pablo/Escritorio/webChat_project/webChat/app/services/user/CreateUserService):
+  
+app/controllers/user_post_controller.rb:2:in `<main>'
+Started POST "/user" for ::1 at 2019-08-18 12:51:48 +0200
+Processing by UserPostController#create as */*
+  Parameters: {"name"=>"pablo"}
+Completed 500 Internal Server Error in 49ms (MongoDB: 0.0ms)
+
+
+  
+NoMethodError (undefined method `create_user_service' for #<UserPostController:0x007fa5c030b340>):
+  
+app/controllers/user_post_controller.rb:10:in `create'
+Started POST "/user" for ::1 at 2019-08-18 12:52:16 +0200
+Processing by UserPostController#create as */*
+  Parameters: {"name"=>"pablo"}
+Completed 500 Internal Server Error in 92ms (MongoDB: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `create_user_service' for #<UserPostController:0x000000057edb28>):
+  
+app/controllers/user_post_controller.rb:10:in `create'
+Started POST "/user" for ::1 at 2019-08-18 12:52:32 +0200
+Processing by UserPostController#create as */*
+  Parameters: {"name"=>"pablo"}
+Completed 500 Internal Server Error in 0ms (MongoDB: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/controllers/user_post_controller.rb:7:in `create'
+app/controllers/user_post_controller.rb:10:in `create'
+Started POST "/user" for ::1 at 2019-08-18 12:54:07 +0200
+Processing by UserPostController#create as */*
+  Parameters: {"name"=>"pablo"}
+Completed 500 Internal Server Error in 45ms (MongoDB: 0.0ms)
+
+
+  
+NoMethodError (undefined method `saveUser' for #<UserPostController:0x000000055c0670>):
+  
+app/controllers/user_post_controller.rb:10:in `create'
+Started POST "/user" for ::1 at 2019-08-18 12:54:38 +0200
+Processing by UserPostController#create as */*
+  Parameters: {"name"=>"pablo"}
+Completed 500 Internal Server Error in 90ms (MongoDB: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `create_user_service' for #<UserPostController:0x007f6b94301ec8>):
+  
+app/controllers/user_post_controller.rb:10:in `create'
+Started POST "/user" for ::1 at 2019-08-18 13:04:08 +0200
+Processing by UserPostController#create as */*
+  Parameters: {"name"=>"pablo"}
+Completed 200 OK in 1ms (Views: 0.3ms | MongoDB: 0.0ms)
+
+
+Started POST "/user" for ::1 at 2019-08-18 13:04:12 +0200
+Processing by UserPostController#create as */*
+  Parameters: {"name"=>"pablo"}
+Completed 500 Internal Server Error in 2ms (MongoDB: 0.0ms)
+
+
+  
+NoMethodError (undefined method `detail' for #<Errors::UserExist:0x007f077000b490>):
+  
+app/controllers/user_post_controller.rb:14:in `rescue in create'
+app/controllers/user_post_controller.rb:8:in `create'
+Started POST "/user" for ::1 at 2019-08-18 13:04:30 +0200
+Processing by UserPostController#create as */*
+  Parameters: {"name"=>"pablo"}
+Completed 200 OK in 1ms (Views: 0.4ms | MongoDB: 0.0ms)
+
+
+Started POST "/user" for ::1 at 2019-08-18 13:04:32 +0200
+Processing by UserPostController#create as */*
+  Parameters: {"name"=>"pablo"}
+Completed 200 OK in 0ms (Views: 0.1ms | MongoDB: 0.0ms)
+
+
+Started POST "/user" for ::1 at 2019-08-18 13:04:46 +0200
+Processing by UserPostController#create as */*
+  Parameters: {"name"=>"pablito"}
+Completed 200 OK in 1ms (Views: 0.3ms | MongoDB: 0.0ms)
+
+
+Started POST "/user" for ::1 at 2019-08-18 13:04:49 +0200
+Processing by UserPostController#create as */*
+  Parameters: {"name"=>"pablito"}
+Completed 200 OK in 1ms (Views: 0.3ms | MongoDB: 0.0ms)
+
+
+Started POST "/user" for ::1 at 2019-08-24 10:50:04 +0200
+Processing by UserPostController#create as */*
+  Parameters: {"name"=>"pablito"}
+Completed 200 OK in 1ms (Views: 0.5ms | MongoDB: 0.0ms)
+
+
+Started POST "/user" for ::1 at 2019-08-27 18:20:05 +0200
+  
+LoadError (cannot load such file -- /home/pablo/Escritorio/webChat_project/webChat/models/user):
+  
+app/services/user/create_user_service.rb:2:in `<main>'
+app/controllers/user_post_real_controller.rb:1:in `<main>'
+Started POST "/user" for ::1 at 2019-08-27 18:21:03 +0200
+  
+LoadError (cannot load such file -- ../models/user):
+  
+app/services/user/create_user_service.rb:2:in `<main>'
+app/controllers/user_post_real_controller.rb:1:in `<main>'
+Started POST "/user" for ::1 at 2019-08-27 18:21:40 +0200
+Processing by UserPostRealController#create as */*
+  Parameters: {"name"=>"pablito"}
+Completed 403 Forbidden in 0ms (Views: 0.2ms | MongoDB: 0.0ms)
+
+
+Started POST "/user" for ::1 at 2019-08-27 18:22:04 +0200
+Processing by UserPostRealController#create as */*
+  Parameters: {"name"=>"pablito44"}
+Completed 403 Forbidden in 0ms (Views: 0.1ms | MongoDB: 0.0ms)
+
+
+Started POST "/user" for ::1 at 2019-08-27 18:23:05 +0200
+Processing by UserPostRealController#create as */*
+  Parameters: {"name"=>"pablito44"}
+Completed 201 Created in 0ms (Views: 0.1ms | MongoDB: 0.0ms)
+
+
+Started POST "/user" for ::1 at 2019-08-27 18:23:48 +0200
+Processing by UserPostRealController#create as */*
+  Parameters: {"name"=>"pablito1"}
+MONGODB | EVENT: #<TopologyOpening topology=Unknown[]>
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | EVENT: #<TopologyChanged prev=Unknown[] new=Unknown[localhost:27017]>
+MONGODB | Topology type 'Unknown' changed to type 'Unknown'.
+MONGODB | EVENT: #<ServerOpening address=localhost:27017 topology=Unknown[localhost:27017]>
+MONGODB | Server localhost:27017 initializing.
+MONGODB | EVENT: #<ServerDescriptionChanged address=localhost:27017 topology=Single[localhost:27017] prev=#<Mongo::Server:Description:0x35898560 config={} average_round_trip_time=> new=#<Mongo::Server:Description:0x14081960 config={"ismaster"=>true, "maxBsonObjectSize"=>16777216, "maxMessageSizeBytes"=>48000000, "maxWriteBatchSize"=>1000, "localTime"=>2019-08-27 16:23:49 UTC, "maxWireVersion"=>5, "minWireVersion"=>0, "readOnly"=>false, "ok"=>1.0} average_round_trip_time=1.093784974>>
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | EVENT: #<TopologyChanged prev=Unknown[localhost:27017] new=Single[localhost:27017]>
+MONGODB | Topology type 'Unknown' changed to type 'Single'.
+MONGODB | localhost:27017 | web_chat_development.find | STARTED | {"find"=>"users", "filter"=>{"name"=>"pablito1"}, "projection"=>{"_id"=>1}, "limit"=>1}
+MONGODB | localhost:27017 | web_chat_development.find | SUCCEEDED | 0.260s
+MONGODB | localhost:27017 | web_chat_development.insert | STARTED | {"insert"=>"users", "documents"=>[{"_id"=>BSON::ObjectId('5d6559156c71fb626debce45'), "name"=>"pablito1"}], "ordered"=>true}
+MONGODB | localhost:27017 | web_chat_development.insert | SUCCEEDED | 0.862s
+Completed 201 Created in 2277ms (Views: 0.2ms | MongoDB: 1.1ms)
+
+
+Started POST "/user" for ::1 at 2019-08-27 18:24:49 +0200
+Processing by UserPostRealController#create as */*
+  Parameters: {"name"=>"pablito1"}
+MONGODB | localhost:27017 | web_chat_development.find | STARTED | {"find"=>"users", "filter"=>{"name"=>"pablito1"}, "projection"=>{"_id"=>1}, "limit"=>1}
+MONGODB | localhost:27017 | web_chat_development.find | SUCCEEDED | 0.025s
+Completed 403 Forbidden in 128ms (Views: 0.1ms | MongoDB: 0.0ms)
+
+
+Started POST "/user" for ::1 at 2019-08-27 18:34:22 +0200
+Processing by UserPostRealController#create as */*
+  Parameters: {"name"=>"pablito3"}
+MONGODB | EVENT: #<TopologyOpening topology=Unknown[]>
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | EVENT: #<TopologyChanged prev=Unknown[] new=Unknown[localhost:27017]>
+MONGODB | Topology type 'Unknown' changed to type 'Unknown'.
+MONGODB | EVENT: #<ServerOpening address=localhost:27017 topology=Unknown[localhost:27017]>
+MONGODB | Server localhost:27017 initializing.
+MONGODB | EVENT: #<ServerDescriptionChanged address=localhost:27017 topology=Single[localhost:27017] prev=#<Mongo::Server:Description:0x46859560 config={} average_round_trip_time=> new=#<Mongo::Server:Description:0x46737860 config={"ismaster"=>true, "maxBsonObjectSize"=>16777216, "maxMessageSizeBytes"=>48000000, "maxWriteBatchSize"=>1000, "localTime"=>2019-08-27 16:34:22 UTC, "maxWireVersion"=>5, "minWireVersion"=>0, "readOnly"=>false, "ok"=>1.0} average_round_trip_time=0.05428351>>
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | EVENT: #<TopologyChanged prev=Unknown[localhost:27017] new=Single[localhost:27017]>
+MONGODB | Topology type 'Unknown' changed to type 'Single'.
+MONGODB | localhost:27017 | web_chat_development.find | STARTED | {"find"=>"users", "filter"=>{"name"=>"pablito3"}, "projection"=>{"_id"=>1}, "limit"=>1}
+MONGODB | localhost:27017 | web_chat_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | web_chat_development.insert | STARTED | {"insert"=>"users", "documents"=>[{"_id"=>BSON::ObjectId('5d655b8e6c71fb68a13b03d9'), "name"=>"pablito3"}], "ordered"=>true}
+MONGODB | localhost:27017 | web_chat_development.insert | SUCCEEDED | 0.001s
+Completed 201 Created in 104ms (Views: 0.3ms | MongoDB: 0.0ms)
+
+
+Started POST "/user" for ::1 at 2019-08-27 18:36:55 +0200
+Processing by UserPostRealController#create as */*
+  Parameters: {"name"=>"pablito3"}
+MONGODB | EVENT: #<TopologyOpening topology=Unknown[]>
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | EVENT: #<TopologyChanged prev=Unknown[] new=Unknown[localhost:27017]>
+MONGODB | Topology type 'Unknown' changed to type 'Unknown'.
+MONGODB | EVENT: #<ServerOpening address=localhost:27017 topology=Unknown[localhost:27017]>
+MONGODB | Server localhost:27017 initializing.
+MONGODB | EVENT: #<ServerDescriptionChanged address=localhost:27017 topology=Single[localhost:27017] prev=#<Mongo::Server:Description:0x45685500 config={} average_round_trip_time=> new=#<Mongo::Server:Description:0x45647740 config={"ismaster"=>true, "maxBsonObjectSize"=>16777216, "maxMessageSizeBytes"=>48000000, "maxWriteBatchSize"=>1000, "localTime"=>2019-08-27 16:36:55 UTC, "maxWireVersion"=>5, "minWireVersion"=>0, "readOnly"=>false, "ok"=>1.0} average_round_trip_time=0.001967095>>
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | EVENT: #<TopologyChanged prev=Unknown[localhost:27017] new=Single[localhost:27017]>
+MONGODB | Topology type 'Unknown' changed to type 'Single'.
+MONGODB | localhost:27017 | web_chat_development.find | STARTED | {"find"=>"users", "filter"=>{"name"=>"pablito3"}, "projection"=>{"_id"=>1}, "limit"=>1}
+MONGODB | localhost:27017 | web_chat_development.find | SUCCEEDED | 0.000s
+Completed 403 Forbidden in 104ms (Views: 0.2ms | MongoDB: 0.0ms)
+
+
+Started POST "/user" for ::1 at 2019-08-27 18:39:04 +0200
+Processing by UserPostRealController#create as */*
+  Parameters: {"name"=>"pablito3"}
+MONGODB | EVENT: #<TopologyOpening topology=Unknown[]>
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | EVENT: #<TopologyChanged prev=Unknown[] new=Unknown[localhost:27017]>
+MONGODB | Topology type 'Unknown' changed to type 'Unknown'.
+MONGODB | EVENT: #<ServerOpening address=localhost:27017 topology=Unknown[localhost:27017]>
+MONGODB | Server localhost:27017 initializing.
+MONGODB | EVENT: #<ServerDescriptionChanged address=localhost:27017 topology=Single[localhost:27017] prev=#<Mongo::Server:Description:0x39864700 config={} average_round_trip_time=> new=#<Mongo::Server:Description:0x39619460 config={"ismaster"=>true, "maxBsonObjectSize"=>16777216, "maxMessageSizeBytes"=>48000000, "maxWriteBatchSize"=>1000, "localTime"=>2019-08-27 16:39:05 UTC, "maxWireVersion"=>5, "minWireVersion"=>0, "readOnly"=>false, "ok"=>1.0} average_round_trip_time=0.002286481>>
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | EVENT: #<TopologyChanged prev=Unknown[localhost:27017] new=Single[localhost:27017]>
+MONGODB | Topology type 'Unknown' changed to type 'Single'.
+MONGODB | localhost:27017 | web_chat_development.find | STARTED | {"find"=>"users", "filter"=>{"name"=>"pablito3"}, "projection"=>{"_id"=>1}, "limit"=>1}
+MONGODB | localhost:27017 | web_chat_development.find | SUCCEEDED | 0.000s
+Completed 403 Forbidden in 256ms (Views: 0.2ms | MongoDB: 0.0ms)
+
+
+Started POST "/user" for ::1 at 2019-08-27 18:41:15 +0200
+Processing by UserPostRealController#create as */*
+  Parameters: {"name"=>"pablito3"}
+MONGODB | EVENT: #<TopologyOpening topology=Unknown[]>
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | EVENT: #<TopologyChanged prev=Unknown[] new=Unknown[localhost:27017]>
+MONGODB | Topology type 'Unknown' changed to type 'Unknown'.
+MONGODB | EVENT: #<ServerOpening address=localhost:27017 topology=Unknown[localhost:27017]>
+MONGODB | Server localhost:27017 initializing.
+MONGODB | EVENT: #<ServerDescriptionChanged address=localhost:27017 topology=Single[localhost:27017] prev=#<Mongo::Server:Description:0x18221480 config={} average_round_trip_time=> new=#<Mongo::Server:Description:0x69970285357460 config={"ismaster"=>true, "maxBsonObjectSize"=>16777216, "maxMessageSizeBytes"=>48000000, "maxWriteBatchSize"=>1000, "localTime"=>2019-08-27 16:41:16 UTC, "maxWireVersion"=>5, "minWireVersion"=>0, "readOnly"=>false, "ok"=>1.0} average_round_trip_time=0.048598435>>
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | EVENT: #<TopologyChanged prev=Unknown[localhost:27017] new=Single[localhost:27017]>
+MONGODB | Topology type 'Unknown' changed to type 'Single'.
+MONGODB | localhost:27017 | web_chat_development.find | STARTED | {"find"=>"users", "filter"=>{"name"=>"pablito3"}, "projection"=>{"_id"=>1}, "limit"=>1}
+MONGODB | localhost:27017 | web_chat_development.find | SUCCEEDED | 0.000s
+Completed 403 Forbidden in 204ms (Views: 0.2ms | MongoDB: 0.0ms)
+
+
+Started POST "/user" for ::1 at 2019-08-27 18:42:16 +0200
+Processing by UserPostRealController#create as */*
+  Parameters: {"name"=>"pablito3"}
+MONGODB | EVENT: #<TopologyOpening topology=Unknown[]>
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | EVENT: #<TopologyChanged prev=Unknown[] new=Unknown[localhost:27017]>
+MONGODB | Topology type 'Unknown' changed to type 'Unknown'.
+MONGODB | EVENT: #<ServerOpening address=localhost:27017 topology=Unknown[localhost:27017]>
+MONGODB | Server localhost:27017 initializing.
+MONGODB | EVENT: #<ServerDescriptionChanged address=localhost:27017 topology=Single[localhost:27017] prev=#<Mongo::Server:Description:0x28046440 config={} average_round_trip_time=> new=#<Mongo::Server:Description:0x5682640 config={"ismaster"=>true, "maxBsonObjectSize"=>16777216, "maxMessageSizeBytes"=>48000000, "maxWriteBatchSize"=>1000, "localTime"=>2019-08-27 16:42:16 UTC, "maxWireVersion"=>5, "minWireVersion"=>0, "readOnly"=>false, "ok"=>1.0} average_round_trip_time=0.272868268>>
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | EVENT: #<TopologyChanged prev=Unknown[localhost:27017] new=Single[localhost:27017]>
+MONGODB | Topology type 'Unknown' changed to type 'Single'.
+MONGODB | localhost:27017 | web_chat_development.find | STARTED | {"find"=>"users", "filter"=>{"name"=>"pablito3"}, "projection"=>{"_id"=>1}, "limit"=>1}
+MONGODB | localhost:27017 | web_chat_development.find | SUCCEEDED | 0.000s
+Completed 200 OK in 307ms (Views: 0.3ms | MongoDB: 0.0ms)
+
+
+Started POST "/user" for ::1 at 2019-08-27 19:22:55 +0200
+Processing by UserPostRealController#create as */*
+  Parameters: {"name"=>"pablito3"}
+MONGODB | EVENT: #<TopologyOpening topology=Unknown[]>
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | EVENT: #<TopologyChanged prev=Unknown[] new=Unknown[localhost:27017]>
+MONGODB | Topology type 'Unknown' changed to type 'Unknown'.
+MONGODB | EVENT: #<ServerOpening address=localhost:27017 topology=Unknown[localhost:27017]>
+MONGODB | Server localhost:27017 initializing.
+MONGODB | EVENT: #<ServerDescriptionChanged address=localhost:27017 topology=Single[localhost:27017] prev=#<Mongo::Server:Description:0x50208060 config={} average_round_trip_time=> new=#<Mongo::Server:Description:0x50152820 config={"ismaster"=>true, "maxBsonObjectSize"=>16777216, "maxMessageSizeBytes"=>48000000, "maxWriteBatchSize"=>1000, "localTime"=>2019-08-27 17:22:56 UTC, "maxWireVersion"=>5, "minWireVersion"=>0, "readOnly"=>false, "ok"=>1.0} average_round_trip_time=0.114850256>>
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | EVENT: #<TopologyChanged prev=Unknown[localhost:27017] new=Single[localhost:27017]>
+MONGODB | Topology type 'Unknown' changed to type 'Single'.
+MONGODB | localhost:27017 | web_chat_development.find | STARTED | {"find"=>"users", "filter"=>{"name"=>"pablito3"}, "projection"=>{"_id"=>1}, "limit"=>1}
+MONGODB | localhost:27017 | web_chat_development.find | SUCCEEDED | 0.001s
+Completed 403 Forbidden in 257ms (Views: 0.3ms | MongoDB: 0.0ms)
+
+
+Started POST "/user/" for 127.0.0.1 at 2019-08-31 16:44:46 +0200
+Processing by UserPostRealController#create as HTML
+  Parameters: {"name"=>"flanagan", "user_post_real"=>{"name"=>"flanagan"}}
+MONGODB | EVENT: #<TopologyOpening topology=Unknown[]>
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | EVENT: #<TopologyChanged prev=Unknown[] new=Unknown[localhost:27017]>
+MONGODB | Topology type 'Unknown' changed to type 'Unknown'.
+MONGODB | EVENT: #<ServerOpening address=localhost:27017 topology=Unknown[localhost:27017]>
+MONGODB | Server localhost:27017 initializing.
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+Completed 403 Forbidden in 60035ms (Views: 0.8ms | MongoDB: 0.0ms)
+
+
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+Started POST "/user/" for 127.0.0.1 at 2019-08-31 17:09:14 +0200
+Processing by UserPostRealController#create as HTML
+  Parameters: {"name"=>"eufrasio", "user_post_real"=>{"name"=>"eufrasio"}}
+MONGODB | EVENT: #<TopologyOpening topology=Unknown[]>
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | EVENT: #<TopologyChanged prev=Unknown[] new=Unknown[localhost:27017]>
+MONGODB | Topology type 'Unknown' changed to type 'Unknown'.
+MONGODB | EVENT: #<ServerOpening address=localhost:27017 topology=Unknown[localhost:27017]>
+MONGODB | Server localhost:27017 initializing.
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | EVENT: #<ServerDescriptionChanged address=localhost:27017 topology=Single[localhost:27017] prev=#<Mongo::Server:Description:0x70131426208980 config={} average_round_trip_time=> new=#<Mongo::Server:Description:0x70131426176160 config={"ismaster"=>true, "maxBsonObjectSize"=>16777216, "maxMessageSizeBytes"=>48000000, "maxWriteBatchSize"=>100000, "localTime"=>2019-08-31 15:10:03 UTC, "logicalSessionTimeoutMinutes"=>30, "minWireVersion"=>0, "maxWireVersion"=>7, "readOnly"=>false, "ok"=>1.0} average_round_trip_time=1.108856>>
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | EVENT: #<TopologyChanged prev=Unknown[localhost:27017] new=Single[localhost:27017]>
+MONGODB | Topology type 'Unknown' changed to type 'Single'.
+MONGODB | localhost:27017 | web_chat_development.find | STARTED | {"find"=>"users", "filter"=>{"name"=>"eufrasio"}, "projection"=>{"_id"=>1}, "limit"=>1, "$readPreference"=>{"mode"=>"primary"}}
+MONGODB | localhost:27017 | web_chat_development.find | SUCCEEDED | 0.000s
+MONGODB | localhost:27017 | web_chat_development.insert | STARTED | {"insert"=>"users", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('5d6a8dcbfa58a449542b5d45'), "name"=>"eufrasio"}], "lsid"=>{"id"=><BSON::Binary:0x70131425994100 type=uuid data=0x8cb4b81a653a4885...>}}
+MONGODB | localhost:27017 | web_chat_development.insert | SUCCEEDED | 0.071s
+Completed 201 Created in 49555ms (Views: 0.6ms | MongoDB: 0.1ms)
+
+
+Started POST "/user/" for 127.0.0.1 at 2019-08-31 17:10:57 +0200
+Processing by UserPostRealController#create as HTML
+  Parameters: {"name"=>"popi", "user_post_real"=>{"name"=>"popi"}}
+MONGODB | localhost:27017 | web_chat_development.find | STARTED | {"find"=>"users", "filter"=>{"name"=>"popi"}, "projection"=>{"_id"=>1}, "limit"=>1, "$readPreference"=>{"mode"=>"primary"}, "lsid"=>{"id"=><BSON::Binary:0x70131425994100 type=uuid data=0x8cb4b81a653a4885...>}}
+MONGODB | localhost:27017 | web_chat_development.find | SUCCEEDED | 0.008s
+MONGODB | localhost:27017 | web_chat_development.insert | STARTED | {"insert"=>"users", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('5d6a8e01fa58a449542b5d46'), "name"=>"popi"}], "lsid"=>{"id"=><BSON::Binary:0x70131425994100 type=uuid data=0x8cb4b81a653a4885...>}}
+MONGODB | localhost:27017 | web_chat_development.insert | SUCCEEDED | 0.000s
+Completed 201 Created in 18ms (Views: 0.2ms | MongoDB: 0.0ms)
+
+
+Started POST "/user/" for 127.0.0.1 at 2019-08-31 17:12:25 +0200
+Processing by UserPostRealController#create as HTML
+  Parameters: {"name"=>"parababa", "user_post_real"=>{"name"=>"parababa"}}
+MONGODB | localhost:27017 | web_chat_development.find | STARTED | {"find"=>"users", "filter"=>{"name"=>"parababa"}, "projection"=>{"_id"=>1}, "limit"=>1, "$readPreference"=>{"mode"=>"primary"}, "lsid"=>{"id"=><BSON::Binary:0x70131425994100 type=uuid data=0x8cb4b81a653a4885...>}}
+MONGODB | localhost:27017 | web_chat_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | web_chat_development.insert | STARTED | {"insert"=>"users", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('5d6a8e59fa58a449542b5d47'), "name"=>"parababa"}], "lsid"=>{"id"=><BSON::Binary:0x70131425994100 type=uuid data=0x8cb4b81a653a4885...>}}
+MONGODB | localhost:27017 | web_chat_development.insert | SUCCEEDED | 0.000s
+Completed 201 Created in 9ms (Views: 0.2ms | MongoDB: 0.0ms)
+
+
+Started POST "/user/" for 127.0.0.1 at 2019-08-31 17:13:09 +0200
+Processing by UserPostRealController#create as HTML
+  Parameters: {"name"=>"guyayo", "user_post_real"=>{"name"=>"guyayo"}}
+MONGODB | localhost:27017 | web_chat_development.find | STARTED | {"find"=>"users", "filter"=>{"name"=>"guyayo"}, "projection"=>{"_id"=>1}, "limit"=>1, "$readPreference"=>{"mode"=>"primary"}, "lsid"=>{"id"=><BSON::Binary:0x70131425994100 type=uuid data=0x8cb4b81a653a4885...>}}
+MONGODB | localhost:27017 | web_chat_development.find | SUCCEEDED | 0.000s
+MONGODB | localhost:27017 | web_chat_development.insert | STARTED | {"insert"=>"users", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('5d6a8e85fa58a449542b5d48'), "name"=>"guyayo"}], "lsid"=>{"id"=><BSON::Binary:0x70131425994100 type=uuid data=0x8cb4b81a653a4885...>}}
+MONGODB | localhost:27017 | web_chat_development.insert | SUCCEEDED | 0.000s
+Completed 201 Created in 4ms (Views: 0.1ms | MongoDB: 0.0ms)
+
+
+MONGODB | localhost:27017 | admin.endSessions | STARTED | {"endSessions"=>[{"id"=><BSON::Binary:0x70131425994100 type=uuid data=0x8cb4b81a653a4885...>}]}
+MONGODB | localhost:27017 | admin.endSessions | SUCCEEDED | 0.000s
+Started GET "/" for ::1 at 2019-09-02 19:04:28 +0200
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Library/Ruby/Gems/2.3.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Library/Ruby/Gems/2.3.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (10.6ms)
+Completed 200 OK in 32ms (Views: 25.3ms | MongoDB: 0.0ms)
+
+
+Started GET "/favicon.ico" for ::1 at 2019-09-02 19:04:29 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/user" for ::1 at 2019-09-02 19:05:41 +0200
+Processing by Users::UserPostRealController#create as */*
+  Parameters: {"name"=>"pepitin"}
+MONGODB | EVENT: #<TopologyOpening topology=Unknown[]>
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | EVENT: #<TopologyChanged prev=Unknown[] new=Unknown[localhost:27017]>
+MONGODB | Topology type 'Unknown' changed to type 'Unknown'.
+MONGODB | EVENT: #<ServerOpening address=localhost:27017 topology=Unknown[localhost:27017]>
+MONGODB | Server localhost:27017 initializing.
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | EVENT: #<ServerDescriptionChanged address=localhost:27017 topology=Single[localhost:27017] prev=#<Mongo::Server:Description:0x70285297769900 config={} average_round_trip_time=> new=#<Mongo::Server:Description:0x70285324320180 config={"ismaster"=>true, "maxBsonObjectSize"=>16777216, "maxMessageSizeBytes"=>48000000, "maxWriteBatchSize"=>100000, "localTime"=>2019-09-02 17:06:10 UTC, "logicalSessionTimeoutMinutes"=>30, "minWireVersion"=>0, "maxWireVersion"=>7, "readOnly"=>false, "ok"=>1.0} average_round_trip_time=1.915054>>
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | EVENT: #<TopologyChanged prev=Unknown[localhost:27017] new=Single[localhost:27017]>
+MONGODB | Topology type 'Unknown' changed to type 'Single'.
+MONGODB | localhost:27017 | web_chat_development.find | STARTED | {"find"=>"users", "filter"=>{"name"=>"pepitin"}, "projection"=>{"_id"=>1}, "limit"=>1, "$readPreference"=>{"mode"=>"primary"}, "lsid"=>{"id"=><BSON::Binary:0x70285299644100 type=uuid data=0xdb0ace08c7734d72...>}}
+MONGODB | localhost:27017 | web_chat_development.find | SUCCEEDED | 0.002s
+MONGODB | localhost:27017 | web_chat_development.insert | STARTED | {"insert"=>"users", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('5d6d4c02fa58a4558e06f5ce'), "name"=>"pepitin"}], "lsid"=>{"id"=><BSON::Binary:0x70285299644100 type=uuid data=0xdb0ace08c7734d72...>}}
+MONGODB | localhost:27017 | web_chat_development.insert | SUCCEEDED | 0.003s
+Completed 201 Created in 29600ms (Views: 0.8ms | MongoDB: 0.0ms)
+
+
+Started POST "/user" for ::1 at 2019-09-02 19:06:26 +0200
+Processing by Users::UserPostRealController#create as */*
+  Parameters: {"name"=>"pepitin"}
+MONGODB | localhost:27017 | web_chat_development.find | STARTED | {"find"=>"users", "filter"=>{"name"=>"pepitin"}, "projection"=>{"_id"=>1}, "limit"=>1, "$readPreference"=>{"mode"=>"primary"}, "lsid"=>{"id"=><BSON::Binary:0x70285299644100 type=uuid data=0xdb0ace08c7734d72...>}}
+MONGODB | localhost:27017 | web_chat_development.find | SUCCEEDED | 0.001s
+Completed 403 Forbidden in 37ms (Views: 0.9ms | MongoDB: 0.0ms)
+
+
+Started POST "/user" for ::1 at 2019-09-02 19:06:32 +0200
+Processing by Users::UserPostRealController#create as */*
+  Parameters: {"name"=>"pepitillo"}
+MONGODB | localhost:27017 | web_chat_development.find | STARTED | {"find"=>"users", "filter"=>{"name"=>"pepitillo"}, "projection"=>{"_id"=>1}, "limit"=>1, "$readPreference"=>{"mode"=>"primary"}, "lsid"=>{"id"=><BSON::Binary:0x70285299644100 type=uuid data=0xdb0ace08c7734d72...>}}
+MONGODB | localhost:27017 | web_chat_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | web_chat_development.insert | STARTED | {"insert"=>"users", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('5d6d4c18fa58a4558e06f5cf'), "name"=>"pepitillo"}], "lsid"=>{"id"=><BSON::Binary:0x70285299644100 type=uuid data=0xdb0ace08c7734d72...>}}
+MONGODB | localhost:27017 | web_chat_development.insert | SUCCEEDED | 0.001s
+Completed 201 Created in 9ms (Views: 0.3ms | MongoDB: 0.0ms)
+
+
+MONGODB | EVENT: #<ServerDescriptionChanged address=localhost:27017 topology=Single[localhost:27017] prev=#<Mongo::Server:Description:0x70285325219780 config={"ismaster"=>true, "maxBsonObjectSize"=>16777216, "maxMessageSizeBytes"=>48000000, "maxWriteBatchSize"=>100000, "localTime"=>2019-09-02 17:11:00 UTC, "logicalSessionTimeoutMinutes"=>30, "minWireVersion"=>0, "maxWireVersion"=>7, "readOnly"=>false, "ok"=>1.0} average_round_trip_time=0.003366948868759312> new=#<Mongo::Server:Description:0x70285302741520 config={} average_round_trip_time=>>
+MONGODB | Server description for localhost:27017 changed from 'standalone' to 'unknown'.
+MONGODB | EVENT: #<TopologyChanged prev=Single[localhost:27017] new=Single[localhost:27017]>
+MONGODB | Topology type 'Single' changed to type 'Single'.
+MONGODB | EVENT: #<TopologyOpening topology=Unknown[]>
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | EVENT: #<TopologyChanged prev=Unknown[] new=Unknown[localhost:27017]>
+MONGODB | Topology type 'Unknown' changed to type 'Unknown'.
+MONGODB | EVENT: #<ServerOpening address=localhost:27017 topology=Unknown[localhost:27017]>
+MONGODB | Server localhost:27017 initializing.
+MONGODB | EVENT: #<ServerDescriptionChanged address=localhost:27017 topology=Single[localhost:27017] prev=#<Mongo::Server:Description:0x70281180328780 config={} average_round_trip_time=> new=#<Mongo::Server:Description:0x70281177751480 config={"ismaster"=>true, "maxBsonObjectSize"=>16777216, "maxMessageSizeBytes"=>48000000, "maxWriteBatchSize"=>100000, "localTime"=>2019-09-05 16:16:06 UTC, "logicalSessionTimeoutMinutes"=>30, "minWireVersion"=>0, "maxWireVersion"=>7, "readOnly"=>false, "ok"=>1.0} average_round_trip_time=0.008411>>
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | EVENT: #<TopologyChanged prev=Unknown[localhost:27017] new=Single[localhost:27017]>
+MONGODB | Topology type 'Unknown' changed to type 'Single'.
+MONGODB | localhost:27017 | web_chat_development.find | STARTED | {"find"=>"users", "filter"=>{"name"=>"pablo"}, "projection"=>{"_id"=>1}, "limit"=>1, "$readPreference"=>{"mode"=>"primary"}, "lsid"=>{"id"=><BSON::Binary:0x70281174831180 type=uuid data=0xec7030dc16f04be7...>}}
+MONGODB | localhost:27017 | web_chat_development.find | SUCCEEDED | 0.002s
+MONGODB | localhost:27017 | web_chat_development.insert | STARTED | {"insert"=>"users", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('5d7134c6f1b2ea2b556007fb'), "name"=>"pablo"}], "lsid"=>{"id"=><BSON::Binary:0x70281174831180 type=uuid data=0xec7030dc16f04be7...>}}
+MONGODB | localhost:27017 | web_chat_development.insert | SUCCEEDED | 0.002s
+MONGODB | localhost:27017 | web_chat_development.find | STARTED | {"find"=>"users", "filter"=>{"name"=>"pablo"}, "lsid"=>{"id"=><BSON::Binary:0x70281174831180 type=uuid data=0xec7030dc16f04be7...>}}
+MONGODB | localhost:27017 | web_chat_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | web_chat_development.count | STARTED | {"count"=>"users", "query"=>{}, "lsid"=>{"id"=><BSON::Binary:0x70281174831180 type=uuid data=0xec7030dc16f04be7...>}}
+MONGODB | localhost:27017 | web_chat_development.count | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | web_chat_development.find | STARTED | {"find"=>"rooms", "filter"=>{"name"=>"default room"}, "projection"=>{"_id"=>1}, "limit"=>1, "$readPreference"=>{"mode"=>"primary"}, "lsid"=>{"id"=><BSON::Binary:0x70281174831180 type=uuid data=0xec7030dc16f04be7...>}}
+MONGODB | localhost:27017 | web_chat_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | web_chat_development.insert | STARTED | {"insert"=>"rooms", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('5d713598f1b2ea2b556007fc'), "name"=>"default room"}], "lsid"=>{"id"=><BSON::Binary:0x70281174831180 type=uuid data=0xec7030dc16f04be7...>}}
+MONGODB | localhost:27017 | web_chat_development.insert | SUCCEEDED | 0.071s
+MONGODB | localhost:27017 | web_chat_development.count | STARTED | {"count"=>"rooms", "query"=>{}, "lsid"=>{"id"=><BSON::Binary:0x70281174831180 type=uuid data=0xec7030dc16f04be7...>}}
+MONGODB | localhost:27017 | web_chat_development.count | SUCCEEDED | 0.000s
+MONGODB | localhost:27017 | admin.endSessions | STARTED | {"endSessions"=>[{"id"=><BSON::Binary:0x70281174831180 type=uuid data=0xec7030dc16f04be7...>}]}
+MONGODB | localhost:27017 | admin.endSessions | SUCCEEDED | 0.000s
+MONGODB | EVENT: #<TopologyOpening topology=Unknown[]>
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | EVENT: #<TopologyChanged prev=Unknown[] new=Unknown[localhost:27017]>
+MONGODB | Topology type 'Unknown' changed to type 'Unknown'.
+MONGODB | EVENT: #<ServerOpening address=localhost:27017 topology=Unknown[localhost:27017]>
+MONGODB | Server localhost:27017 initializing.
+MONGODB | EVENT: #<ServerDescriptionChanged address=localhost:27017 topology=Single[localhost:27017] prev=#<Mongo::Server:Description:0x70281206007020 config={} average_round_trip_time=> new=#<Mongo::Server:Description:0x70281205970120 config={"ismaster"=>true, "maxBsonObjectSize"=>16777216, "maxMessageSizeBytes"=>48000000, "maxWriteBatchSize"=>100000, "localTime"=>2019-09-05 16:22:33 UTC, "logicalSessionTimeoutMinutes"=>30, "minWireVersion"=>0, "maxWireVersion"=>7, "readOnly"=>false, "ok"=>1.0} average_round_trip_time=0.006107>>
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | EVENT: #<TopologyChanged prev=Unknown[localhost:27017] new=Single[localhost:27017]>
+MONGODB | Topology type 'Unknown' changed to type 'Single'.
+MONGODB | localhost:27017 | web_chat_development.find | STARTED | {"find"=>"users", "filter"=>{}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x70281188684200 type=uuid data=0x225d0ecf4c6d47c4...>}}
+MONGODB | localhost:27017 | web_chat_development.find | SUCCEEDED | 0.005s
+MONGODB | localhost:27017 | web_chat_development.find | STARTED | {"find"=>"rooms", "filter"=>{}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x70281188684200 type=uuid data=0x225d0ecf4c6d47c4...>}}
+MONGODB | localhost:27017 | web_chat_development.find | SUCCEEDED | 0.000s
+MONGODB | localhost:27017 | admin.endSessions | STARTED | {"endSessions"=>[{"id"=><BSON::Binary:0x70281188684200 type=uuid data=0x225d0ecf4c6d47c4...>}]}
+MONGODB | localhost:27017 | admin.endSessions | SUCCEEDED | 0.000s
+Started POST "/user/" for 127.0.0.1 at 2019-09-06 17:16:49 +0200
+Processing by Users::UserPostRealController#create as HTML
+  Parameters: {"name"=>"usuarioq", "user_post_real"=>{"name"=>"usuarioq"}}
+MONGODB | EVENT: #<TopologyOpening topology=Unknown[]>
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | EVENT: #<TopologyChanged prev=Unknown[] new=Unknown[localhost:27017]>
+MONGODB | Topology type 'Unknown' changed to type 'Unknown'.
+MONGODB | EVENT: #<ServerOpening address=localhost:27017 topology=Unknown[localhost:27017]>
+MONGODB | Server localhost:27017 initializing.
+MONGODB | EVENT: #<ServerDescriptionChanged address=localhost:27017 topology=Single[localhost:27017] prev=#<Mongo::Server:Description:0x70287676345900 config={} average_round_trip_time=> new=#<Mongo::Server:Description:0x70287676414560 config={"ismaster"=>true, "maxBsonObjectSize"=>16777216, "maxMessageSizeBytes"=>48000000, "maxWriteBatchSize"=>100000, "localTime"=>2019-09-06 15:16:49 UTC, "logicalSessionTimeoutMinutes"=>30, "minWireVersion"=>0, "maxWireVersion"=>7, "readOnly"=>false, "ok"=>1.0} average_round_trip_time=0.003415>>
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | EVENT: #<TopologyChanged prev=Unknown[localhost:27017] new=Single[localhost:27017]>
+MONGODB | Topology type 'Unknown' changed to type 'Single'.
+MONGODB | localhost:27017 | web_chat_development.find | STARTED | {"find"=>"users", "filter"=>{"name"=>"usuarioq"}, "projection"=>{"_id"=>1}, "limit"=>1, "$readPreference"=>{"mode"=>"primary"}, "lsid"=>{"id"=><BSON::Binary:0x70287676378240 type=uuid data=0x3ec55020937d45a7...>}}
+MONGODB | localhost:27017 | web_chat_development.find | SUCCEEDED | 0.002s
+MONGODB | localhost:27017 | web_chat_development.insert | STARTED | {"insert"=>"users", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('5d727861fa58a42ea24d3bc3'), "name"=>"usuarioq"}], "lsid"=>{"id"=><BSON::Binary:0x70287676378240 type=uuid data=0x3ec55020937d45a7...>}}
+MONGODB | localhost:27017 | web_chat_development.insert | SUCCEEDED | 0.002s
+Completed 201 Created in 34ms (Views: 0.4ms | MongoDB: 0.0ms)
+
+
+Started GET "/room" for 127.0.0.1 at 2019-09-06 17:18:32 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/room"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/rooms" for 127.0.0.1 at 2019-09-06 17:19:04 +0200
+  
+LoadError (Unable to autoload constant Rooms::GetRoomsService, expected /Users/pablo/Desktop/webChat_project/webChat-back/app/services/rooms/get_rooms_service.rb to define it):
+  
+app/controllers/rooms/rooms_get_real_controller.rb:5:in `initialize'
+MONGODB | localhost:27017 | admin.endSessions | STARTED | {"endSessions"=>[{"id"=><BSON::Binary:0x70287676378240 type=uuid data=0x3ec55020937d45a7...>}]}
+MONGODB | localhost:27017 | admin.endSessions | SUCCEEDED | 0.000s
+Started GET "/rooms" for 127.0.0.1 at 2019-09-06 17:23:46 +0200
+  
+LoadError (Unable to autoload constant Rooms::GetRoomsService, expected /Users/pablo/Desktop/webChat_project/webChat-back/app/services/rooms/get_rooms_service.rb to define it):
+  
+app/controllers/rooms/rooms_get_real_controller.rb:5:in `initialize'
+Started GET "/rooms" for 127.0.0.1 at 2019-09-06 17:25:32 +0200
+Processing by Rooms::RoomsGetRealController#list as HTML
+MONGODB | EVENT: #<TopologyOpening topology=Unknown[]>
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | EVENT: #<TopologyChanged prev=Unknown[] new=Unknown[localhost:27017]>
+MONGODB | Topology type 'Unknown' changed to type 'Unknown'.
+MONGODB | EVENT: #<ServerOpening address=localhost:27017 topology=Unknown[localhost:27017]>
+MONGODB | Server localhost:27017 initializing.
+MONGODB | EVENT: #<ServerDescriptionChanged address=localhost:27017 topology=Single[localhost:27017] prev=#<Mongo::Server:Description:0x70233138794380 config={} average_round_trip_time=> new=#<Mongo::Server:Description:0x70233142375860 config={"ismaster"=>true, "maxBsonObjectSize"=>16777216, "maxMessageSizeBytes"=>48000000, "maxWriteBatchSize"=>100000, "localTime"=>2019-09-06 15:25:32 UTC, "logicalSessionTimeoutMinutes"=>30, "minWireVersion"=>0, "maxWireVersion"=>7, "readOnly"=>false, "ok"=>1.0} average_round_trip_time=0.006508>>
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | EVENT: #<TopologyChanged prev=Unknown[localhost:27017] new=Single[localhost:27017]>
+MONGODB | Topology type 'Unknown' changed to type 'Single'.
+MONGODB | localhost:27017 | web_chat_development.find | STARTED | {"find"=>"rooms", "filter"=>{}, "lsid"=>{"id"=><BSON::Binary:0x70233142520300 type=uuid data=0x265b0ef7467f4d60...>}}
+MONGODB | localhost:27017 | web_chat_development.find | SUCCEEDED | 0.002s
+Completed 201 Created in 60ms (Views: 58.3ms | MongoDB: 0.0ms)
+
+
+MONGODB | EVENT: #<ServerDescriptionChanged address=localhost:27017 topology=Single[localhost:27017] prev=#<Mongo::Server:Description:0x70233144650320 config={"ismaster"=>true, "maxBsonObjectSize"=>16777216, "maxMessageSizeBytes"=>48000000, "maxWriteBatchSize"=>100000, "localTime"=>2019-09-06 15:28:52 UTC, "logicalSessionTimeoutMinutes"=>30, "minWireVersion"=>0, "maxWireVersion"=>7, "readOnly"=>false, "ok"=>1.0} average_round_trip_time=0.0007081684380853034> new=#<Mongo::Server:Description:0x70233146910380 config={} average_round_trip_time=>>
+MONGODB | Server description for localhost:27017 changed from 'standalone' to 'unknown'.
+MONGODB | EVENT: #<TopologyChanged prev=Single[localhost:27017] new=Single[localhost:27017]>
+MONGODB | Topology type 'Single' changed to type 'Single'.
+MONGODB | EVENT: #<TopologyOpening topology=Unknown[]>
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | EVENT: #<TopologyChanged prev=Unknown[] new=Unknown[localhost:27017]>
+MONGODB | Topology type 'Unknown' changed to type 'Unknown'.
+MONGODB | EVENT: #<ServerOpening address=localhost:27017 topology=Unknown[localhost:27017]>
+MONGODB | Server localhost:27017 initializing.
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
+MONGODB | Error running ismaster on localhost:27017: Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017 (for 127.0.0.1:27017 (no TLS))
