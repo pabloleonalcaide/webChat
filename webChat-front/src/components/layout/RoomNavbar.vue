@@ -1,0 +1,55 @@
+<template>
+  <nav>
+    <img src="../../assets/chat.png"/>
+    <button class="addButton" type="button" v-on:click="showModal()">Añadir Sala</button>
+    <NewRoomModal v-show="isModalVisible" @close="closeModal" />
+  </nav>
+</template>
+<script>
+import NewRoomModal from '../NewRoomModal'
+export default {
+  name: 'RoomNavbar',
+  components: {
+    NewRoomModal
+  },
+  data () {
+    return {
+      isModalVisible: false
+    }
+  },
+  methods: {
+    showModal () {
+      this.isModalVisible = true
+    },
+    closeModal () {
+      this.isModalVisible = false
+    }
+  }
+}
+</script>
+<style lang="scss" scoped>
+  nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .addButton{
+      padding: 10px;
+      position: relative;
+      display: block;
+      border-width: 0;
+      outline: none;
+      border-radius: 2px;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+      background-color: #21ade7;
+      color: #fff;
+      transition: background-color .3s;
+      cursor:pointer;
+      &:hover{
+        background-color: #2b88afc5;
+      }
+    }
+    img{
+      height: 50px;
+    }
+  }
+</style>
