@@ -17,10 +17,13 @@
 import RoomNavbar from './layout/RoomNavbar'
 import RoomElement from './RoomElement'
 import { getRooms } from '../services/api/room'
+import Vue from 'vue'
+import VueRouter from 'vue-router'
+Vue.use(VueRouter)
 export default {
   name: 'RoomsList',
   beforeMount () {
-    this.user = this.$store.getters.currentUser
+    this.ensureUserExists()
     this.rooms = this.listRooms()
   },
   components: {
@@ -36,11 +39,15 @@ export default {
   },
   methods: {
     listRooms () {
-      console.log('listing rooms')
       getRooms().then(resp => {
-        console.log(resp)
         this.rooms = resp.message
       })
+    },
+    ensureUserExists () {
+      this.user = this.$store.getters.currentUser
+      if (this.user === null || this.user === '') {
+        this.$router.push('Login')
+      }
     }
   }
 }

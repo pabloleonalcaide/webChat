@@ -21,6 +21,7 @@ export const store = new Vuex.Store({
   },
   mutations: {
     SELECT_USER (state, user) {
+      console.log('in mutations')
       state.user = user
     },
     SELECT_ROOM (state, room) {
@@ -29,8 +30,9 @@ export const store = new Vuex.Store({
   },
   actions: {
     setUser ({commit, state}, user) {
-      if (user.length > 2 && user.length < 16) {
-        commit(SELECT_USER, user)
+      let name = user.name
+      if (name.length > 2 && name.length < 16) {
+        commit(SELECT_USER, name)
       }
     },
     setRoom ({commit, state}, room) {
