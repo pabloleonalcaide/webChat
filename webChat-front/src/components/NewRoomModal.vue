@@ -16,6 +16,9 @@
         </header>
         <section class="modal-body">
           <input type="text" v-model.trim="roomName" placeholder="Sala...">
+          <p>
+            <span v-if="invalid" class="error-text">{{ errorMessage }}</span>
+          </p>
         </section>
         <footer class="modal-footer">
           <slot name="footer">
@@ -42,11 +45,14 @@
   </transition>
 </template>
 <script>
+import { createRoom } from '../services/api/room'
 export default {
   name: 'NewRoomModal',
   data () {
     return {
-      roomName: ''
+      roomName: '',
+      invalid: false,
+      errorMessage: ''
     }
   },
   methods: {
@@ -54,8 +60,21 @@ export default {
       this.$emit('close')
     },
     save () {
-      // POST Room to API
-      this.$emit('close')
+      invalid = roomName.length > 4 && roomName.length <= 20
+      if(!invalid){
+        createRoom(roomName).then(resp => {
+          if (resp.status === 200){
+            this.$emit('close')
+          }else{
+            invalid = true
+            errorMessage = "Error al guardar sala"
+          }
+        })
+
+      }else{
+        errorMessage = 'El nombre debe tener entre 5 y 20 caracteres'
+      }      
+      
     }
   }
 }

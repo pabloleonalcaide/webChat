@@ -6,6 +6,9 @@ Rails.application.routes.draw do
   scope module: :rooms do
     get 'rooms', controller: :rooms_get_real, action: :list
     get 'rooms_test', controller: :rooms_get_test, action: :list
+
+    post 'rooms', controller: :rooms_post_real, action: :create
+    post 'rooms_test', controller: :rooms_post_test, action: :create
   end
 end
 
