@@ -539,3 +539,45 @@ Completed 201 Created in 2ms (Views: 0.3ms | MongoDB: 0.0ms)
 Processing by Users::UserPostTestController#create as HTML
   Parameters: {"name"=>"user"}
 Completed 403 Forbidden in 0ms (Views: 0.2ms | MongoDB: 0.0ms)
+Processing by Rooms::RoomsGetTestController#list as HTML
+Completed 200 OK in 1ms (Views: 0.6ms | MongoDB: 0.0ms)
+Processing by Rooms::RoomsPostTestController#create as HTML
+  Parameters: {"name"=>"room1"}
+Completed 500 Internal Server Error in 4ms (MongoDB: 0.0ms)
+Processing by Rooms::RoomsPostTestController#create as HTML
+  Parameters: {"name"=>"room1"}
+Completed 500 Internal Server Error in 4ms (MongoDB: 0.0ms)
+Processing by Users::UserPostTestController#create as HTML
+  Parameters: {"name"=>"user"}
+Completed 201 Created in 2ms (Views: 0.2ms | MongoDB: 0.0ms)
+Processing by Users::UserPostTestController#create as HTML
+  Parameters: {"name"=>"user"}
+Completed 403 Forbidden in 1ms (Views: 0.2ms | MongoDB: 0.0ms)
+Processing by Rooms::RoomsGetTestController#list as HTML
+Completed 200 OK in 1ms (Views: 0.6ms | MongoDB: 0.0ms)
+Processing by Rooms::RoomsPostTestController#create as HTML
+  Parameters: {"name"=>"room1"}
+Completed 500 Internal Server Error in 3ms (MongoDB: 0.0ms)
+Processing by Rooms::RoomsPostTestController#create as HTML
+  Parameters: {"name"=>"room1"}
+Completed 500 Internal Server Error in 4ms (MongoDB: 0.0ms)
+Processing by Users::UserPostTestController#create as HTML
+  Parameters: {"name"=>"user"}
+Completed 201 Created in 2ms (Views: 0.2ms | MongoDB: 0.0ms)
+Processing by Users::UserPostTestController#create as HTML
+  Parameters: {"name"=>"user"}
+Completed 403 Forbidden in 0ms (Views: 0.2ms | MongoDB: 0.0ms)
+Processing by Rooms::RoomsGetTestController#list as HTML
+Completed 200 OK in 1ms (Views: 0.5ms | MongoDB: 0.0ms)
+Processing by Rooms::RoomsPostTestController#create as HTML
+  Parameters: {"name"=>"room1"}
+Completed 201 Created in 2ms (Views: 0.3ms | MongoDB: 0.0ms)
+Processing by Rooms::RoomsPostTestController#create as HTML
+  Parameters: {"name"=>"room1"}
+Completed 403 Forbidden in 1ms (Views: 0.3ms | MongoDB: 0.0ms)
+Processing by Users::UserPostTestController#create as HTML
+  Parameters: {"name"=>"user"}
+Completed 201 Created in 2ms (Views: 0.3ms | MongoDB: 0.0ms)
+Processing by Users::UserPostTestController#create as HTML
+  Parameters: {"name"=>"user"}
+Completed 403 Forbidden in 1ms (Views: 0.2ms | MongoDB: 0.0ms)
