@@ -60,21 +60,19 @@ export default {
       this.$emit('close')
     },
     save () {
-      invalid = roomName.length > 4 && roomName.length <= 20
-      if(!invalid){
-        createRoom(roomName).then(resp => {
-          if (resp.status === 200){
+      this.invalid = this.roomName.length < 4 || this.roomName.length > 20
+      if (!this.invalid) {
+        createRoom(this.roomName).then(resp => {
+          if (resp.status === 201) {
             this.$emit('close')
-          }else{
-            invalid = true
-            errorMessage = "Error al guardar sala"
+          } else {
+            this.invalid = true
+            this.errorMessage = 'Error al guardar sala'
           }
         })
-
-      }else{
-        errorMessage = 'El nombre debe tener entre 5 y 20 caracteres'
-      }      
-      
+      } else {
+        this.errorMessage = 'El nombre debe tener entre 5 y 20 caracteres'
+      }
     }
   }
 }
@@ -116,20 +114,24 @@ export default {
     justify-content: flex-end;
     .btn-close,
     .btn-save {
-      background: #21ade7;
+      cursor: pointer;
+      background-color: #21ade7;
       color: #fff;
       border: 1px solid #21ade7;
       border-radius: 4px;
       padding: 5px;
       margin: 10px;
       font-weight: bold;
+      &:hover{
+        background-color:#1a8dbe;
+      }
     }
   }
-
   .modal-body {
     position: relative;
     padding: 20px 10px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     input{
       background: none;
