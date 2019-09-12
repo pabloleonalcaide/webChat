@@ -1,14 +1,14 @@
 module Errors
   class UserExist < StandardError
     def initialize
-      @message = 'The User already exists'
+      @message = 'El usuario ya existe'
       @status = 403
     end
 
     def to_h
       {
         status: status,
-        message: message
+        message: :message
       }
     end
 

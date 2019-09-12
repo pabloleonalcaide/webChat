@@ -34,8 +34,12 @@ export default {
             this.$router.push('Rooms')
           } else {
             this.invalid = true
-            this.errorMessage = resp.data.message
+            this.errorMessage = resp.message
+            console.log(resp)
           }
+        }).catch(error => {
+          this.invalid = true
+          this.errorMessage = error.response.data.message
         })
       } else {
         this.errorMessage = 'Uno necesita un nombre'

@@ -1,7 +1,7 @@
 module Errors
   class RoomExist < StandardError
     def initialize
-      @message = 'The Room already exists'
+      @message = 'La Sala ya existe'
       @status = 403
     end
 

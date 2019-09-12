@@ -5,11 +5,14 @@ Vue.use(Vuex)
 
 export const SELECT_USER = 'SELECT_USER'
 export const SELECT_ROOM = 'SELECT_ROOM'
+export const SET_ROOMS = 'SET_ROOMS'
+export const ADD_ROOM = 'ADD_ROOM'
 
 export const store = new Vuex.Store({
   state: {
     user: '',
-    current_room: ''
+    current_room: '',
+    rooms: []
   },
   getters: {
     currentUser: state => {
@@ -21,11 +24,16 @@ export const store = new Vuex.Store({
   },
   mutations: {
     SELECT_USER (state, user) {
-      console.log('in mutations')
       state.user = user
     },
     SELECT_ROOM (state, room) {
       state.current_room = room
+    },
+    SET_ROOMS (state, rooms) {
+      state.rooms = rooms
+    },
+    ADD_ROOM (state, room) {
+      state.rooms.push({room})
     }
   },
   actions: {
@@ -37,6 +45,12 @@ export const store = new Vuex.Store({
     },
     setRoom ({commit, state}, room) {
       commit(SELECT_ROOM, room)
+    },
+    setRooms ({commit, state}, rooms) {
+      commit(SET_ROOMS, rooms)
+    },
+    addRoom ({commit, state}, room) {
+      commit(ADD_ROOM, room)
     }
   }
 })

@@ -1,7 +1,7 @@
 module Errors
   class RoomsNotFound < StandardError
     def initialize
-      @message = 'Rooms not Found'
+      @message = 'No se han encontrado salas'
       @status = 400
     end
 

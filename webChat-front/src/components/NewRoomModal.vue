@@ -64,6 +64,7 @@ export default {
       if (!this.invalid) {
         createRoom(this.roomName).then(resp => {
           if (resp.status === 201) {
+            this.$store.dispatch('addRoom', {name: this.roomName})
             this.$emit('close')
           } else {
             this.invalid = true

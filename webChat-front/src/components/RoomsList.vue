@@ -26,6 +26,9 @@ export default {
     this.ensureUserExists()
     this.rooms = this.listRooms()
   },
+  mounted () {
+    this.$store.dispatch('setRooms', this.rooms)
+  },
   components: {
     'RoomNavbar': RoomNavbar,
     'RoomElement': RoomElement
