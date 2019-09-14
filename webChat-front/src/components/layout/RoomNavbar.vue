@@ -22,6 +22,7 @@ export default {
       this.isModalVisible = true
     },
     closeModal () {
+      this.$emit('close')
       this.isModalVisible = false
     }
   }

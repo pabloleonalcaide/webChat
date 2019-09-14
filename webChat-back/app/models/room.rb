@@ -4,4 +4,5 @@ class Room
   field :name, type: String
   validates :name, presence: true, uniqueness: true
   validates :id, presence:true, uniqueness: true
+  has_many :messages
 end

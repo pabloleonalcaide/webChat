@@ -31,11 +31,10 @@ export default {
         createUser(currentUser).then(resp => {
           if (resp.status === 201) {
             this.$store.dispatch('setUser', {name: currentUser})
-            this.$router.push('Rooms')
+            this.$router.push('/rooms')
           } else {
             this.invalid = true
             this.errorMessage = resp.message
-            console.log(resp)
           }
         }).catch(error => {
           this.invalid = true
