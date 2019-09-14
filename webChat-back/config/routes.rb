@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount ActionCable.server => '/cable'
   scope module: :users do
     post 'user', controller: :user_post_real, action: :create
     post 'user_test', controller: :user_post_test, action: :create
@@ -9,6 +10,9 @@ Rails.application.routes.draw do
 
     post 'rooms', controller: :rooms_post_real, action: :create
     post 'rooms_test', controller: :rooms_post_test, action: :create
+  end
+
+  scope module: :messages do
   end
 end
 
