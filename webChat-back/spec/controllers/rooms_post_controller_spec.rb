@@ -5,12 +5,12 @@ RSpec.describe Rooms::RoomsPostTestController, type: :controller do
   describe "Create Room" do
     Rails.cache.clear
     it "return status 201 when Room is created" do
-      post :create, params: {name: "room1"}
+      post :create, params: {roomId: "1234", roomName: "room1"}
       status = response.status
       expect(status).to eq(201)
     end
     it "return status 403 when Room already exists" do
-      post :create, params: {name: "room1"}
+      post :create, params: {roomId: "1234", roomName: "room1"}
       status = response.status
       expect(status).to eq(403)
     end      

@@ -8,8 +8,9 @@ module Rooms
     # POST /rooms
     def create
       begin
-        roomName = params[:name]
-        @roomService.saveRoom(roomName)
+        roomName = params[:roomName]
+        roomId = params[:roomId]
+        @roomService.saveRoom(roomId, roomName)
         render :json => {message: roomName}, status: 201
       rescue Errors::RoomExist
         e = Errors::RoomExist.new

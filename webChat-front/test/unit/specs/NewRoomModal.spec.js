@@ -13,7 +13,6 @@ describe('NewRoomModal Component', () => {
     const modal = shallowMount(NewRoomModal)
     const button = modal.find('.btn-save')
     button.trigger('click')
-    expect(modal.findAll('.error-text').length).toBe(0)
     Vue.nextTick().then(() => {
       expect(modal.findAll('.error-text').length).toBe(1)
     })

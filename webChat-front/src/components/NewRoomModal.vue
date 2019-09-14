@@ -46,6 +46,7 @@
 </template>
 <script>
 import { createRoom } from '../services/api/room'
+import { uuid } from 'vue-uuid'
 export default {
   name: 'NewRoomModal',
   data () {
@@ -61,8 +62,10 @@ export default {
     },
     save () {
       this.invalid = this.roomName.length < 4 || this.roomName.length > 20
+      const roomId = uuid.v4()
+      let data = {id: roomId, name: this.roomName}
       if (!this.invalid) {
-        createRoom(this.roomName).then(resp => {
+        createRoom(data).then(resp => {
           if (resp.status === 201) {
             this.$store.dispatch('addRoom', {name: this.roomName})
             this.$emit('close')

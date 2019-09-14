@@ -1,6 +1,6 @@
 <template>
 <div>
-  <RoomNavbar></RoomNavbar>
+  <RoomNavbar @close='closeModal'></RoomNavbar>
   <h2>Bienvenido {{user}}, selecciona una sala</h2>
   <ul class="roomsList">
     <RoomElement
@@ -8,6 +8,7 @@
       :key=index
       :id="room.id"
       :name="room.name"
+      @selectRoom="selectRoom"
     >
     </RoomElement>
   </ul>
@@ -26,9 +27,6 @@ export default {
     this.ensureUserExists()
     this.rooms = this.listRooms()
   },
-  mounted () {
-    this.$store.dispatch('setRooms', this.rooms)
-  },
   components: {
     'RoomNavbar': RoomNavbar,
     'RoomElement': RoomElement
@@ -43,13 +41,21 @@ export default {
     listRooms () {
       getRooms().then(resp => {
         this.rooms = resp.message
+      }).catch(error => {
+        console.log(error.response.data.message)
       })
     },
     ensureUserExists () {
       this.user = this.$store.getters.currentUser
       if (this.user === null || this.user === '') {
-        this.$router.push('Login')
+        this.$router.push('/')
       }
+    },
+    closeModal () {
+      this.listRooms()
+    },
+    selectRoom (e) {
+      this.$router.push('/room')
     }
   }
 }
