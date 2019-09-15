@@ -1,17 +1,32 @@
 <template>
   <nav>
-    <img src="../../assets/chat.png"/>
-    <button class="addButton" type="button" v-on:click="showModal()">Añadir Sala</button>
+    <img src="../../assets/chat.png" v-on:click="backToRoot">
+    <button
+      class="addButton"
+      type="button"
+      v-if="context === 'roomList'"
+      v-on:click="showModal()"
+      >Añadir Sala</button>
+    <button
+      class="addButton"
+      type="button"
+      v-if="context === 'room'"
+      v-on:click="backToRoomList"
+      >Salas</button>
     <NewRoomModal v-show="isModalVisible" @close="closeModal" />
   </nav>
 </template>
 <script>
 import NewRoomModal from '../NewRoomModal'
+import Vue from 'vue'
+import VueRouter from 'vue-router'
+Vue.use(VueRouter)
 export default {
   name: 'RoomNavbar',
   components: {
     NewRoomModal
   },
+  props: ['context'],
   data () {
     return {
       isModalVisible: false
@@ -24,6 +39,12 @@ export default {
     closeModal () {
       this.$emit('close')
       this.isModalVisible = false
+    },
+    backToRoomList () {
+      this.$router.push('/rooms')
+    },
+    backToRoot () {
+      this.$router.push('/')
     }
   }
 }
@@ -33,6 +54,7 @@ export default {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    width:100%;
     .addButton{
       padding: 10px;
       position: relative;
@@ -51,6 +73,11 @@ export default {
     }
     img{
       height: 50px;
+      cursor: pointer;
+      &:hover{
+        background-color: #21ADE7;
+        border-radius: 100px;
+      }
     }
   }
 </style>

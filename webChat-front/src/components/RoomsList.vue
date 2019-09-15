@@ -1,6 +1,9 @@
 <template>
 <div>
-  <RoomNavbar @close='closeModal'></RoomNavbar>
+  <RoomNavbar
+    context="roomList"
+    @close='closeModal'
+    ></RoomNavbar>
   <h2>Bienvenido {{user}}, selecciona una sala</h2>
   <ul class="roomsList">
     <RoomElement
@@ -23,13 +26,13 @@ import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 export default {
   name: 'RoomsList',
-  beforeMount () {
-    this.ensureUserExists()
-    this.rooms = this.listRooms()
-  },
   components: {
     'RoomNavbar': RoomNavbar,
     'RoomElement': RoomElement
+  },
+  beforeMount () {
+    this.ensureUserExists()
+    this.rooms = this.listRooms()
   },
   data () {
     return {
@@ -54,7 +57,8 @@ export default {
     closeModal () {
       this.listRooms()
     },
-    selectRoom (e) {
+    selectRoom (event) {
+      this.$store.dispatch('setRoom', event)
       this.$router.push('/room')
     }
   }

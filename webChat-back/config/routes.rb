@@ -13,6 +13,8 @@ Rails.application.routes.draw do
   end
 
   scope module: :messages do
+    get 'messages', controller: :messages_get_real, action: :list
+    get 'messages_test', controller: :messages_get_test, action: :list
   end
 end
 

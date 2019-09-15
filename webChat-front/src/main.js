@@ -18,7 +18,7 @@ Vue.use(Vuex)
 Vue.use(ActionCableVue, {
   debug: true,
   debugLevel: 'error',
-  connectionUrl: 'ws://http://localhost:3000/cable',
+  connectionUrl: 'http://localhost:3000/cable',
   connectInmediately: true
 })
 /* eslint-disable no-new */

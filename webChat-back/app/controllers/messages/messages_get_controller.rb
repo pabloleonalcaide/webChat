@@ -8,7 +8,7 @@ module Messages
 
     def list
       begin
-        roomId = params[:roomId]
+        roomId = params[:room]
         messages = @messageService.getLast(roomId)
         render :json => {message: messages}, status: 200
       rescue Errors::RoomNotFound
