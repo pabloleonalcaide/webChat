@@ -20,7 +20,7 @@ describe('Login Component', () => {
 
   it('should detect valid input', () => {
     const loginComponent = shallowMount(Login)
-    loginComponent.setData({name: 'Lovecraft'})
+    loginComponent.setData({userName: 'Lovecraft'})
     const button = loginComponent.find('button')
     button.trigger('click')
     Vue.nextTick().then(() => {

@@ -6,7 +6,6 @@ import App from './App'
 import router from './router'
 import 'vue-material-design-icons/styles.css'
 import { store } from './store/store.js'
-import ActionCableVue from 'actioncable-vue'
 import UUID from 'vue-uuid'
 
 Vue.config.productionTip = false
@@ -15,12 +14,12 @@ Vue.use(UUID)
 /** Get Vuex to the Store */
 Vue.use(Vuex)
 /** Get ActionCable to Websocket connection */
-Vue.use(ActionCableVue, {
-  debug: true,
-  debugLevel: 'error',
-  connectionUrl: 'http://localhost:3000/cable',
-  connectInmediately: true
-})
+// Vue.use(ActionCableVue, {
+//   debug: true,
+//   debugLevel: 'error',
+//   connectionUrl: 'http://localhost:3000/cable',
+//   connectInmediately: true
+// })
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

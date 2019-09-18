@@ -8,7 +8,12 @@ const HTTP = axios.create({
   }
 })
 const formatMessage = (user, room, message) => {
-  return JSON.parse('{"user":' + user + ', "room":' + room + ', "message":' + message + '}')
+  return JSON.parse('{"user": "' + user + '", "room": "' + room + '", "message": "' + message + '"}')
+}
+
+const sendMessage = (user, room, message) => {
+  const payload = formatMessage(user, room, message)
+  return HTTP.post('/messages/', payload)
 }
 
 const getLastMessages = (room) => {
@@ -20,5 +25,5 @@ const getLastMessages = (room) => {
     return response.data
   })
 }
- 
-export { formatMessage, getLastMessages }
+
+export { sendMessage, getLastMessages }

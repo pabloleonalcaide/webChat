@@ -4,7 +4,7 @@
     context="roomList"
     @close='closeModal'
     ></RoomNavbar>
-  <h2>Bienvenido {{user}}, selecciona una sala</h2>
+  <h2>Bienvenido, selecciona una sala</h2>
   <ul class="roomsList">
     <RoomElement
       v-for="(room, index) in rooms"
@@ -36,7 +36,6 @@ export default {
   },
   data () {
     return {
-      user: '',
       rooms: []
     }
   },
@@ -49,8 +48,8 @@ export default {
       })
     },
     ensureUserExists () {
-      this.user = this.$store.getters.currentUser
-      if (this.user === null || this.user === '') {
+      let user = this.$store.getters.currentUser
+      if (user === null || user === {}) {
         this.$router.push('/')
       }
     },

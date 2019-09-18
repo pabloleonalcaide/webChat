@@ -11,7 +11,9 @@ describe('RoomsList Component', () => {
   let store
   beforeEach(() => {
     store = new Vuex.Store({
-      state: {},
+      state: {
+        user: {'name': 'Lovecraft', 'id': 'secret'}
+      },
       getters: {
         currentUser: jest.fn()
       }

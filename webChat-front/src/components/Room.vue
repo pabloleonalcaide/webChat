@@ -15,7 +15,9 @@
 </template>
 <script>
 import RoomNavbar from './layout/RoomNavbar'
-import { formatMessage, getLastMessages } from '../services/api/message'
+import { sendMessage, getLastMessages } from '../services/api/message'
+// import ActionCable from 'actioncable-vue'
+
 export default {
   name: 'room',
   components: {
@@ -25,37 +27,39 @@ export default {
     return {
       roomName: '',
       roomId: '',
-      currentUser: '',
+      currentUser: {},
       message: '',
       message_history: []
     }
   },
   channels: {
-    ["ChatChannel"]: {
-      connected () {
-        console.log('Connected to ' + this.roomName)
-      },
-      rejected () {
+    connected () {
+      console.log('Connected to ' + this.roomName)
+    },
+    rejected () {
 
-      },
-      received (data) {
-        console.log('Received data: ' + data)
-      },
-      disconnected () {
-        console.log('Disconnected from ' + this.roomName)
-      }
+    },
+    received (data) {
+      console.log('Received data: ' + data)
+    },
+    disconnected () {
+      console.log('Disconnected from ' + this.roomName)
     }
   },
   methods: {
     sendMessage () {
       const user = this.$store.getters.currentUser
       const room = this.$store.getters.currentRoom
-      let payload = formatMessage(user, room, this.message)
-      this.$cable.perform({
-        channel: 'ChatChannel',
-        action: 'send_message',
-        data: {content: payload}
+      sendMessage(user.name, room, this.message).then(resp => {
+        console.log(resp)
+      }).catch(error => {
+        console.log(error.response.data.message)
       })
+      // this.$cable.perform({
+      //   channel: 'ChatChannel',
+      //   action: 'send_message',
+      //   data: {content: payload}
+      // })
     },
     recoverMessages () {
       getLastMessages().then(resp => {
@@ -67,9 +71,9 @@ export default {
   },
   mounted () {
     this.recoverMessages()
-    this.$cable.subscribe(
-      {channel: 'ChatChannel', room: this.roomId}, this.roomId
-    )
+    // this.$cable.subscribe(
+    //   {channel: 'ChatChannel', room: this.roomId}, this.roomId
+    // )
   }
 }
 </script>

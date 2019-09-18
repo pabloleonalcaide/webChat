@@ -2,7 +2,7 @@
     <div class="loginContainer">
         <img src="../assets/chat.png" class="chatLogo"/>
         <div class="inputRow">
-            <input type="text" v-model.trim="user" placeholder="Usuario">
+            <input type="text" v-model.trim="userName" placeholder="Usuario">
             <button id="loginBtn" type="button" v-on:click="login()">Entrar</button>
         </div>
         <p v-if="invalid" class="error-text">{{ errorMessage }}</p>
@@ -11,13 +11,13 @@
 <script>
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import { createUser } from '../services/api/user'
+import { createUser, formatUserMessage } from '../services/api/user'
 Vue.use(VueRouter)
 export default {
   name: 'login',
   data () {
     return {
-      user: '',
+      userName: '',
       invalid: false,
       response: '',
       errorMessage: ''
@@ -25,12 +25,13 @@ export default {
   },
   methods: {
     login () {
-      let currentUser = this.user
-      this.invalid = currentUser === ''
+      let userName = this.userName
+      this.invalid = userName === ''
       if (!this.invalid) {
+        let currentUser = formatUserMessage(userName)
         createUser(currentUser).then(resp => {
           if (resp.status === 201) {
-            this.$store.dispatch('setUser', {name: currentUser})
+            this.$store.dispatch('setUser', currentUser)
             this.$router.push('/rooms')
           } else {
             this.invalid = true

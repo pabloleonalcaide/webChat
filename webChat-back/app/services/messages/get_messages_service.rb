@@ -6,7 +6,8 @@ class GetMessagesService
   end
   def self.getLast(roomId)
     begin
-      Message.find_by(room: roomId).limit(20)
+      message = Message.find_by(room: roomId).limit(20)
+      message
     rescue
       raise Errors::RoomsNotFound
     end

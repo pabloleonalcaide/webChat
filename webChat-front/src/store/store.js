@@ -3,14 +3,14 @@ import Vuex from 'vuex'
 
 Vue.use(Vuex)
 
-export const SELECT_USER = 'SELECT_USER'
+export const SET_USER = 'SET_USER'
 export const SET_ROOM = 'SET_ROOM'
 export const SET_ROOMS = 'SET_ROOMS'
 export const ADD_ROOM = 'ADD_ROOM'
 
 export const store = new Vuex.Store({
   state: {
-    user: '',
+    user: {},
     current_room: '',
     rooms: []
   },
@@ -23,7 +23,7 @@ export const store = new Vuex.Store({
     }
   },
   mutations: {
-    SELECT_USER (state, user) {
+    SET_USER (state, user) {
       state.user = user
     },
     SET_ROOM (state, room) {
@@ -40,7 +40,7 @@ export const store = new Vuex.Store({
     setUser ({commit, state}, user) {
       let name = user.name
       if (name.length > 2 && name.length < 16) {
-        commit(SELECT_USER, name)
+        commit(SET_USER, name)
       }
     },
     setRoom ({commit, state}, room) {
