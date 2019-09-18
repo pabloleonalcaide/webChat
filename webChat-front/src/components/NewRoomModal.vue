@@ -16,6 +16,9 @@
         </header>
         <section class="modal-body">
           <input type="text" v-model.trim="roomName" placeholder="Sala...">
+          <p>
+            <span v-if="invalid" class="error-text">{{ errorMessage }}</span>
+          </p>
         </section>
         <footer class="modal-footer">
           <slot name="footer">
@@ -42,11 +45,15 @@
   </transition>
 </template>
 <script>
+import { createRoom } from '../services/api/room'
+import { uuid } from 'vue-uuid'
 export default {
   name: 'NewRoomModal',
   data () {
     return {
-      roomName: ''
+      roomName: '',
+      invalid: false,
+      errorMessage: ''
     }
   },
   methods: {
@@ -54,8 +61,22 @@ export default {
       this.$emit('close')
     },
     save () {
-      // POST Room to API
-      this.$emit('close')
+      this.invalid = this.roomName.length < 4 || this.roomName.length > 20
+      const roomId = uuid.v4()
+      let data = {id: roomId, name: this.roomName}
+      if (!this.invalid) {
+        createRoom(data).then(resp => {
+          if (resp.status === 201) {
+            this.$store.dispatch('addRoom', {name: this.roomName})
+            this.$emit('close')
+          } else {
+            this.invalid = true
+            this.errorMessage = 'Error al guardar sala'
+          }
+        })
+      } else {
+        this.errorMessage = 'El nombre debe tener entre 5 y 20 caracteres'
+      }
     }
   }
 }
@@ -97,20 +118,24 @@ export default {
     justify-content: flex-end;
     .btn-close,
     .btn-save {
-      background: #21ade7;
+      cursor: pointer;
+      background-color: #21ade7;
       color: #fff;
       border: 1px solid #21ade7;
       border-radius: 4px;
       padding: 5px;
       margin: 10px;
       font-weight: bold;
+      &:hover{
+        background-color:#1a8dbe;
+      }
     }
   }
-
   .modal-body {
     position: relative;
     padding: 20px 10px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     input{
       background: none;

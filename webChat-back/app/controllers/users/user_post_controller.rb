@@ -9,7 +9,8 @@ module Users
     def create
       begin
         userName = params[:name]
-        @userService.saveUser(userName)
+        userId = params[:id]
+        @userService.saveUser(userName,userId)
         render :json => {message: userName}, status: 201
       rescue Errors::UserExist
         e = Errors::UserExist.new

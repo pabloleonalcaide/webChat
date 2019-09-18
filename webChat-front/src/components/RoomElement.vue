@@ -1,6 +1,12 @@
 <template>
   <li class="listElement">
-    <button :value="id"><message-text /> {{name}}</button>
+    <button
+      :value="id"
+      :name="name"
+      @click="selectRoom"
+      >
+      <message-text /> {{name}}
+    </button>
   </li>
 </template>
 <script>
@@ -10,6 +16,11 @@ export default {
   props: ['name', 'id'],
   components: {
     'message-text': MessageText
+  },
+  methods: {
+    selectRoom (event) {
+      this.$emit('selectRoom', event.target.name)
+    }
   }
 }
 </script>

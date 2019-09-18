@@ -1,14 +1,14 @@
 module Errors
-  class UserExist < StandardError
+  class RoomExist < StandardError
     def initialize
-      @message = 'El usuario ya existe'
+      @message = 'La Sala ya existe'
       @status = 403
     end
 
     def to_h
       {
         status: status,
-        message: :message
+        message: message
       }
     end
 

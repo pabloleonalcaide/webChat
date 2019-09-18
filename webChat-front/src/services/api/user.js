@@ -1,4 +1,6 @@
 import axios from 'axios'
+import { uuid } from 'vue-uuid'
+
 const HTTP = axios.create({
   baseURL: 'http://localhost:3000',
   timeout: 100000,
@@ -7,22 +9,18 @@ const HTTP = axios.create({
   }
 })
 
-const getUsers = () => {
-  return HTTP.get('/user').then(response => {
-    return response.data
-  })
-}
 const getUser = (id) => {
   return HTTP.get('/user/' + id).then(response => {
     return response.data
   })
 }
-const createUser = (name) => {
-  const payload = {name: name}
-  return HTTP.post('/user/', payload)
+const createUser = (user) => {
+  return HTTP.post('/user/', user)
 }
 const deleteUser = (name) => {
   return HTTP.delete('/user/', {name: name})
 }
-
-export {getUsers, getUser, createUser, deleteUser}
+const formatUserMessage = (name) => {
+  return JSON.parse('{"name": "' + name + '", "id": "' + uuid.v4() + '"}')
+}
+export { getUser, createUser, deleteUser, formatUserMessage }

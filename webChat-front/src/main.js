@@ -6,11 +6,20 @@ import App from './App'
 import router from './router'
 import 'vue-material-design-icons/styles.css'
 import { store } from './store/store.js'
+import UUID from 'vue-uuid'
 
-// axios.defaults.baseUrl = 'http://localhost:3000'
 Vue.config.productionTip = false
+/** UUID generator */
+Vue.use(UUID)
 /** Get Vuex to the Store */
 Vue.use(Vuex)
+/** Get ActionCable to Websocket connection */
+// Vue.use(ActionCableVue, {
+//   debug: true,
+//   debugLevel: 'error',
+//   connectionUrl: 'http://localhost:3000/cable',
+//   connectInmediately: true
+// })
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

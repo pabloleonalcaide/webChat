@@ -3,13 +3,16 @@ import Vuex from 'vuex'
 
 Vue.use(Vuex)
 
-export const SELECT_USER = 'SELECT_USER'
-export const SELECT_ROOM = 'SELECT_ROOM'
+export const SET_USER = 'SET_USER'
+export const SET_ROOM = 'SET_ROOM'
+export const SET_ROOMS = 'SET_ROOMS'
+export const ADD_ROOM = 'ADD_ROOM'
 
 export const store = new Vuex.Store({
   state: {
-    user: '',
-    current_room: ''
+    user: {},
+    current_room: '',
+    rooms: []
   },
   getters: {
     currentUser: state => {
@@ -20,21 +23,34 @@ export const store = new Vuex.Store({
     }
   },
   mutations: {
-    SELECT_USER (state, user) {
+    SET_USER (state, user) {
       state.user = user
     },
-    SELECT_ROOM (state, room) {
+    SET_ROOM (state, room) {
       state.current_room = room
+    },
+    SET_ROOMS (state, rooms) {
+      state.rooms = rooms
+    },
+    ADD_ROOM (state, room) {
+      state.rooms.push({room})
     }
   },
   actions: {
     setUser ({commit, state}, user) {
-      if (user.length > 2 && user.length < 16) {
-        commit(SELECT_USER, user)
+      let name = user.name
+      if (name.length > 2 && name.length < 16) {
+        commit(SET_USER, name)
       }
     },
     setRoom ({commit, state}, room) {
-      commit(SELECT_ROOM, room)
+      commit(SET_ROOM, room)
+    },
+    setRooms ({commit, state}, rooms) {
+      commit(SET_ROOMS, rooms)
+    },
+    addRoom ({commit, state}, room) {
+      commit(ADD_ROOM, room)
     }
   }
 })

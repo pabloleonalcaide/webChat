@@ -12,8 +12,8 @@ const getRooms = () => {
     return response.data
   })
 }
-const createRoom = (name) => {
-  const payload = {name: name}
+const createRoom = (id, name) => {
+  const payload = {roomId: id, roomName: name}
   return HTTP.post('/rooms/', payload)
 }
 const deleteRoom = (name) => {
