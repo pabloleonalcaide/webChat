@@ -3,7 +3,8 @@ El proyecto consiste en una plataforma de chat web que permite a los usuarios co
 La arquitectura en el core de la aplicación sigue el patrón 'Convention over configuration' típico de _Rails_.
 
 ## Instalación
-
+### Base de Datos
+* La aplicación requiere de MongoDB para la persistencia en base de datos (Utiliza el cliente Mongoid para su manejo desde el backend en RoR)
 ### Backend
 * Instalar las dependencias definidas en nuestro `GemFile`
 
@@ -11,6 +12,9 @@ La arquitectura en el core de la aplicación sigue el patrón 'Convention over c
 * Instalar las dependencias definidas en nuestro fichero `package.json`:
 
 ## Despliegue
+
+### Base de Datos
+Es necesario que el cliente de MongoDB esté ejecutándose de fondo, podemos levantarlo desde una terminal con el comando `mongod` que mantendrá en ejecución el daemon de esta BD por defecto en el puerto 27017
 
 ### Backend
 Nos dirigimos al directorio de la aplicación Rails y lanzamos el servidor, que escuchará por defecto desde el puerto 3000

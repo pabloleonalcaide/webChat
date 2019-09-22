@@ -16,12 +16,10 @@ const sendMessage = (user, room, message) => {
   return HTTP.post('/messages/', payload)
 }
 
-const getLastMessages = (room) => {
-  return HTTP.get('/messages/', {
-    params: {
-      room: room
-    }
-  }).then(response => {
+const getLastMessages = (roomId) => {
+  console.log('roomId => ' + roomId)
+  return HTTP.get('/messages', {params: { roomId: roomId }}
+  ).then(response => {
     return response.data
   })
 }

@@ -5,6 +5,7 @@ class GetRoomsService
   end
   def self.get(hasRooms = true)
     begin
+      Rails.logger.debug('Recuperando salas disponibles')
       Room.all
     rescue
       raise Errors::RoomsNotFound

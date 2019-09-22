@@ -13,13 +13,7 @@ Vue.config.productionTip = false
 Vue.use(UUID)
 /** Get Vuex to the Store */
 Vue.use(Vuex)
-/** Get ActionCable to Websocket connection */
-// Vue.use(ActionCableVue, {
-//   debug: true,
-//   debugLevel: 'error',
-//   connectionUrl: 'http://localhost:3000/cable',
-//   connectInmediately: true
-// })
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

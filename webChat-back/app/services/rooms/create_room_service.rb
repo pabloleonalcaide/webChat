@@ -2,12 +2,14 @@ require './lib/errors/roomExist'
 class CreateRoomService
   def initialize()
   end
-  # save the user if not being used
+  # save the room if not being used
   def self.saveRoom(roomId, roomName)
     begin
+      Rails.logger.debug("Insertando sala " + roomName + " con id " + roomId)
       Room.create!(id: roomId, name: roomName)
     rescue
-      raise Errors::roomExist
+      puts $!.message
+      raise Errors::RoomExist
     end
   end
 end

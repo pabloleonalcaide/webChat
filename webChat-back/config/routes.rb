@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   scope module: :messages do
     get 'messages', controller: :messages_get_real, action: :list
     get 'messages_test', controller: :messages_get_test, action: :list
+    
     post 'messages', controller: :messages_post_real, action: :create
     post 'messages_test', controller: :messages_post_test, action: :create
   end

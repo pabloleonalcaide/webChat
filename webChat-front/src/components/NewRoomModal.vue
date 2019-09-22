@@ -69,10 +69,10 @@ export default {
           if (resp.status === 201) {
             this.$store.dispatch('addRoom', {name: this.roomName})
             this.$emit('close')
-          } else {
-            this.invalid = true
-            this.errorMessage = 'Error al guardar sala'
           }
+        }).catch(error => {
+          this.errorMessage = error.response.data.message
+          this.invalid = true
         })
       } else {
         this.errorMessage = 'El nombre debe tener entre 5 y 20 caracteres'
