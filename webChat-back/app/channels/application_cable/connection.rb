@@ -3,13 +3,13 @@ module ApplicationCable
     identified_by :current_user
 
     def connect
-      Rails.logger.debug("Connected to Action Cable")
       self.current_user = find_verified_user
+      Rails.logger.debug("Connected to Action Cable")
     end
 
     protected
       def find_verified_user
-        if current_user = User.find_by(id: cookies.signed[:user_id])
+        if current_user = User.find_by(id: request.params[:token])
           current_user
         else
           reject_unauthorized_connection

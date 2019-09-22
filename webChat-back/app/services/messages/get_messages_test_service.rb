@@ -1,16 +1,16 @@
 require './lib/errors/RoomsNotFound'
 require './app/models/room'
 require './app/models/message'
-class GetMessagesService
+class GetMessagesTestService
   def initialize()
   end
   
   def self.getLast(roomId)
-    getMockedMessages()
+    self.getMockedMessages(roomId)
   end
 
   private
-  def getMockedMessages()
+  def self.getMockedMessages(roomId)
     [
       {text: 'message 1', room: 'room_test_1', user: 'user 1'},
       {text: 'message 2', room: 'room_test_2', user: 'user 2'},

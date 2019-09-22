@@ -1,6 +1,6 @@
 class Message
   include Mongoid::Document
   field :text, type: String
-  field :room, type: Reference
-  field :user, type: Reference
+  field :room, type: String
+  field :user, type: String
 end

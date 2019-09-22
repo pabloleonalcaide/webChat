@@ -18,7 +18,7 @@ export const store = new Vuex.Store({
     currentUser: state => {
       return state.user
     },
-    curentRoom: state => {
+    currentRoom: state => {
       return state.current_room
     }
   },
@@ -40,7 +40,7 @@ export const store = new Vuex.Store({
     setUser ({commit, state}, user) {
       let name = user.name
       if (name.length > 2 && name.length < 16) {
-        commit(SET_USER, name)
+        commit(SET_USER, user)
       }
     },
     setRoom ({commit, state}, room) {

@@ -5,6 +5,13 @@
     ></RoomNavbar>
     <div class="conversationBox">
       <div class="messagesContainer">
+        <p
+          v-for="(message, index) in message_history"
+          :key=index
+          class="messageLine"
+        >
+          <span><b>{{message.user}}: </b> {{message.text}}</span>
+        </p>
       </div>
     </div>
     <div class="downBar">
@@ -16,7 +23,7 @@
 <script>
 import RoomNavbar from './layout/RoomNavbar'
 import { sendMessage, getLastMessages } from '../services/api/message'
-// import ActionCable from 'actioncable-vue'
+import ActionCable from 'actioncable'
 
 export default {
   name: 'room',
@@ -48,32 +55,45 @@ export default {
   },
   methods: {
     sendMessage () {
-      const user = this.$store.getters.currentUser
-      const room = this.$store.getters.currentRoom
-      sendMessage(user.name, room, this.message).then(resp => {
+      const room = this.roomId
+      sendMessage(this.currentUser.name, room, this.message).then(resp => {
         console.log(resp)
       }).catch(error => {
         console.log(error.response.data.message)
       })
-      // this.$cable.perform({
-      //   channel: 'ChatChannel',
-      //   action: 'send_message',
-      //   data: {content: payload}
-      // })
     },
     recoverMessages () {
-      getLastMessages().then(resp => {
+      getLastMessages(this.roomId).then(resp => {
         this.message_history = resp.message
       }).catch(error => {
         console.log(error.response.data.message)
+        this.message_history = [{text: 'Bienvenido! esta sala aún está vacía!', room: this.roomId, user: 'roomManager'}]
       })
     }
   },
+  beforeMount () {
+    this.currentUser = this.$store.getters.currentUser
+    this.roomId = this.$store.getters.currentRoom
+    var user = this.$store.getters.currentUser
+    var cable = ActionCable.createConsumer('http://localhost:3000/cable?token=' + user.id)
+
+    var channel = cable.subscriptions.create(
+      'ChatChannel', {
+        connected () {
+          console.log('connected')
+        },
+        disconnected () {
+          console.log('disconnected')
+        },
+        received (data) {
+          console.log('received')
+          console.log(data)
+        }
+      }
+    )
+  },
   mounted () {
     this.recoverMessages()
-    // this.$cable.subscribe(
-    //   {channel: 'ChatChannel', room: this.roomId}, this.roomId
-    // )
   }
 }
 </script>
@@ -89,6 +109,10 @@ export default {
       margin: 5px 0;
       .messagesContainer{
         overflow-y: scroll;
+        .messageLine{
+          text-align: left;
+          margin-left: 5px;
+        }
       }
     }
     .downBar{
