@@ -2,10 +2,11 @@ class ChatChannel < ApplicationCable::Channel
 
   def subscribed
     Rails.logger.debug("Subscribed on ActionCable")
-    stream_from "ChatChannel"
+    stream_from "chatChannel"
   end
 
   def unsubscribed
+    Rails.logger.debug("Unsubscribed from ActionCable")
   end
   
   def receive(data)

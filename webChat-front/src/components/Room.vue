@@ -10,12 +10,12 @@
           :key=index
           class="messageLine"
         >
-          <span><b>{{message.user}}: </b> {{message.text}}</span>
+          <span><b>{{message.user}}: </b> {{message.message}}</span>
         </p>
       </div>
     </div>
     <div class="downBar">
-      <input type="text" name="message" id="inputMessage">
+      <input type="text" name="message" v-model.trim="message" id="inputMessage">
       <button type="submit" @click="sendMessage" id="submit">Enviar</button>
     </div>
   </div>
@@ -39,27 +39,13 @@ export default {
       message_history: []
     }
   },
-  channels: {
-    connected () {
-      console.log('Connected to ' + this.roomName)
-    },
-    rejected () {
-
-    },
-    received (data) {
-      console.log('Received data: ' + data)
-    },
-    disconnected () {
-      console.log('Disconnected from ' + this.roomName)
-    }
-  },
   methods: {
     sendMessage () {
       const room = this.roomId
       sendMessage(this.currentUser.name, room, this.message).then(resp => {
-        console.log(resp)
+        this.message = ''
       }).catch(error => {
-        console.log(error.response.data.message)
+        console.log(error)
       })
     },
     recoverMessages () {
@@ -67,7 +53,7 @@ export default {
         this.message_history = resp.message
       }).catch(error => {
         console.log(error.response.data.message)
-        this.message_history = [{text: 'Bienvenido! esta sala aún está vacía!', room: this.roomId, user: 'roomManager'}]
+        this.message_history = [{message: 'Bienvenido! esta sala aún está vacía!', room: this.roomId, user: 'roomManager'}]
       })
     }
   },
@@ -85,9 +71,9 @@ export default {
         disconnected () {
           console.log('disconnected')
         },
-        received (data) {
-          console.log('received')
-          console.log(data)
+        received: (data) => {
+          console.log('received' + JSON.stringify(data))
+          this.message_history.push(data)
         }
       }
     )

@@ -17,7 +17,6 @@ const sendMessage = (user, room, message) => {
 }
 
 const getLastMessages = (roomId) => {
-  console.log('roomId => ' + roomId)
   return HTTP.get('/messages', {params: { roomId: roomId }}
   ).then(response => {
     return response.data
