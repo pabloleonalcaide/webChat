@@ -22,9 +22,14 @@ describe('Room Component', () => {
     })
   })
   it('should render correct the Room', () => {
-    const roomComponent = shallowMount(Room, {store, localVue})
+    const stablishConnection = jest.fn()
+    const roomComponent = shallowMount(Room, {
+      methods: {stablishConnection},
+      store, 
+      localVue}
+      )
     roomComponent.setData({
-      roomId: 'r1qwerty'
+      roomName: 'r1qwerty'
     })
     expect(roomComponent.findAll('.roomContainer').length).toBe(1)
   })

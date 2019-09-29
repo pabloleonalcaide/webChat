@@ -16,9 +16,9 @@ module Messages
         ActionCable.server.broadcast 'chatChannel',
           user: @user, 
           room: @room, 
-          message: @message
+          text: @message
 
-          response = {:user => @user, :room => @room, :message => @message}
+          response = {:user => @user, :room => @room, :text => @message}
         render :json => response.to_json, :status => 201
       rescue Errors::MessageError
         e = Errors::MessageError.new

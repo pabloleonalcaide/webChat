@@ -2,8 +2,15 @@
     <div class="loginContainer">
         <img src="../assets/chat.png" class="chatLogo"/>
         <div class="inputRow">
-            <input type="text" v-model.trim="userName" placeholder="Usuario">
-            <button id="loginBtn" type="button" v-on:click="login()">Entrar</button>
+            <input
+              type="text"
+              v-model.trim="userName"
+              placeholder="Usuario"
+              @keyup.enter="login">
+            <button id="loginBtn"
+              type="button"
+              @click="login">
+            Entrar</button>
         </div>
         <p v-if="invalid" class="error-text">{{ errorMessage }}</p>
     </div>

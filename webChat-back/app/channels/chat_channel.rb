@@ -7,6 +7,7 @@ class ChatChannel < ApplicationCable::Channel
 
   def unsubscribed
     Rails.logger.debug("Unsubscribed from ActionCable")
+    Rails.logger.debug("--------- SE HA DESCONECTADO EL USUARIO :" + :current_user)
   end
   
   def receive(data)
