@@ -67,7 +67,11 @@ export default {
       var cable = ActionCable.createConsumer('http://localhost:3000/cable?token=' + this.currentUser.id)
 
       this.channel = cable.subscriptions.create(
-        'ChatChannel', {
+        {
+          channel: 'ChatChannel',
+          room: this.roomName
+        },
+        {
           connected () {
             console.log('connected')
           },
@@ -75,6 +79,7 @@ export default {
             console.warn('disconnected')
           },
           received: (data) => {
+            console.log('received data')
             this.message_history.push(data)
             const chatContainer = this.$el.querySelector('#conversationBox')
             chatContainer.scrollTop = chatContainer.scrollHeight
@@ -84,7 +89,7 @@ export default {
     },
     recoverMessages () {
       getLastMessages(this.roomName).then(resp => {
-        this.message_history = resp.message
+        this.message_history = resp.message.reverse()
       }).catch(error => {
         console.error(error)
         this.message_history = [{text: 'Bienvenido! esta sala aún está vacía!', room: this.roomName, user: 'roomManager'}]
@@ -100,6 +105,7 @@ export default {
   },
   beforeDestroy () {
     this.channel.unsubscribe()
+    console.warn('Unsubscribed from ActionCable')
   },
   updated () {
     const chatContainer = this.$el.querySelector('#conversationBox')

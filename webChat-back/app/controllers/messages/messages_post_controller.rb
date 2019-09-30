@@ -13,12 +13,12 @@ module Messages
         @message = params[:message]
         @messageService.saveMessage(@user, @room, @message)
 
-        ActionCable.server.broadcast 'chatChannel',
+        ActionCable.server.broadcast("chat_channel_#{params[:room]}",
           user: @user, 
           room: @room, 
           text: @message
-
-          response = {:user => @user, :room => @room, :text => @message}
+        )
+        response = {:user => @user, :room => @room, :text => @message}
         render :json => response.to_json, :status => 201
       rescue Errors::MessageError
         e = Errors::MessageError.new
