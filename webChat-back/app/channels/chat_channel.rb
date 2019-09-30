@@ -1,3 +1,4 @@
+require './app/services/user/delete_user_service'
 class ChatChannel < ApplicationCable::Channel
 
   def subscribed
@@ -7,10 +8,7 @@ class ChatChannel < ApplicationCable::Channel
 
   def unsubscribed
     Rails.logger.debug("Unsubscribed from ChatChannel")
-    Rails.logger.debug("Unsubscribed user: ")
-    puts(current_user.name)
-    puts(current_user.id)
-    puts(current_user['name'])
+    DeleteUserService.delete(current_user.id)
   end
   
   def receive(data)

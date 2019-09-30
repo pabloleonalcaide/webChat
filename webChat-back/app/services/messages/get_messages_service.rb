@@ -6,7 +6,6 @@ class GetMessagesService
   end
   def self.getLast(roomId)
     begin
-      # messageList = Message.where(room: roomId).limit(20)
       messageList = Message.where(room: roomId).order_by(_id: :desc).limit(20);
       messageList
     rescue
