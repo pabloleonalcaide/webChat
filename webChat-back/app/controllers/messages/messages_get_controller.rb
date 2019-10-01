@@ -1,7 +1,6 @@
 require './lib/errors/RoomNotFound'
 module Messages
   class MessagesGetController < ApplicationController 
-  include Response
     def initialize(service)
       @messageService = service
     end

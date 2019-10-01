@@ -1,7 +1,6 @@
 require './lib/errors/roomExist'
 module Rooms
   class RoomsPostController < ApplicationController 
-  include Response
     def initialize(service)
       @roomService = service
     end

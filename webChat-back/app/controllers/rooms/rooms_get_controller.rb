@@ -1,7 +1,6 @@
 require './lib/errors/RoomsNotFound'
 module Rooms
   class RoomsGetController < ApplicationController 
-  include Response
     def initialize(service)
       @roomsService = service
     end
