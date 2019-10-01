@@ -55,7 +55,9 @@ npm run dev
 
 ## Ejecución de Tests
 
-Se han desarrollado diferentes suites de tests, tanto para el código de Rails utilizando `Rspec`:
+Se han desarrollado diferentes suites de tests para el código de Rails utilizando `Rspec`:
+
+(_No se ha mockeado la conexión webSocket, por lo que en los tests realizados sobre los controladores es necesario mantener levantado **Redis**_)
 
 ```bash
 cd webChat-back
