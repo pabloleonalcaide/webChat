@@ -3,7 +3,7 @@
     <RoomNavbar
     context="room"
     ></RoomNavbar>
-    <div class="conversationBox">
+    <div id="conversationBox">
       <div class="messagesContainer">
         <p
           v-for="(message, index) in message_history"
@@ -15,8 +15,16 @@
       </div>
     </div>
     <div class="downBar">
-      <input type="text" name="message" id="inputMessage">
-      <button type="submit" @click="sendMessage" id="submit">Enviar</button>
+      <input
+        type="text"
+        name="message"
+        v-model.trim="message"
+        @keyup.enter="sendMessage"
+        id="inputMessage">
+      <button
+        type="submit"
+        @click="sendMessage"
+        id="submit">Enviar</button>
     </div>
   </div>
 </template>
@@ -33,67 +41,75 @@ export default {
   data () {
     return {
       roomName: '',
-      roomId: '',
       currentUser: {},
       message: '',
-      message_history: []
-    }
-  },
-  channels: {
-    connected () {
-      console.log('Connected to ' + this.roomName)
-    },
-    rejected () {
-
-    },
-    received (data) {
-      console.log('Received data: ' + data)
-    },
-    disconnected () {
-      console.log('Disconnected from ' + this.roomName)
+      message_history: [],
+      channel: {}
     }
   },
   methods: {
+    ensureUserExists () {
+      let user = this.$store.getters.currentUser
+      if (user === null || user === {}) {
+        this.$router.push('/')
+      }
+    },
     sendMessage () {
-      const room = this.roomId
-      sendMessage(this.currentUser.name, room, this.message).then(resp => {
-        console.log(resp)
+      sendMessage(this.currentUser.name, this.roomName, this.message).then(resp => {
+        this.message = ''
       }).catch(error => {
-        console.log(error.response.data.message)
+        console.error(error)
       })
     },
+    stablishConnection () {
+      this.currentUser = this.$store.getters.currentUser
+      this.roomName = this.$store.getters.currentRoom
+      var cable = ActionCable.createConsumer('http://localhost:3000/cable?token=' + this.currentUser.id)
+
+      this.channel = cable.subscriptions.create(
+        {
+          channel: 'ChatChannel',
+          room: this.roomName
+        },
+        {
+          connected () {
+            console.log('connected')
+          },
+          disconnected () {
+            console.warn('disconnected')
+          },
+          received: (data) => {
+            console.log('received data')
+            this.message_history.push(data)
+            const chatContainer = this.$el.querySelector('#conversationBox')
+            chatContainer.scrollTop = chatContainer.scrollHeight
+          }
+        }
+      )
+    },
     recoverMessages () {
-      getLastMessages(this.roomId).then(resp => {
-        this.message_history = resp.message
+      getLastMessages(this.roomName).then(resp => {
+        this.message_history = resp.message.reverse()
       }).catch(error => {
-        console.log(error.response.data.message)
-        this.message_history = [{text: 'Bienvenido! esta sala aún está vacía!', room: this.roomId, user: 'roomManager'}]
+        console.error(error)
+        this.message_history = [{text: 'Bienvenido! esta sala aún está vacía!', room: this.roomName, user: 'roomManager'}]
       })
     }
   },
   beforeMount () {
-    this.currentUser = this.$store.getters.currentUser
-    this.roomId = this.$store.getters.currentRoom
-    var user = this.$store.getters.currentUser
-    var cable = ActionCable.createConsumer('http://localhost:3000/cable?token=' + user.id)
-
-    var channel = cable.subscriptions.create(
-      'ChatChannel', {
-        connected () {
-          console.log('connected')
-        },
-        disconnected () {
-          console.log('disconnected')
-        },
-        received (data) {
-          console.log('received')
-          console.log(data)
-        }
-      }
-    )
+    this.ensureUserExists()
+    this.stablishConnection()
   },
   mounted () {
     this.recoverMessages()
+  },
+  beforeDestroy () {
+    this.channel.unsubscribe()
+    console.warn('Unsubscribed from ActionCable')
+  },
+  updated () {
+    const chatContainer = this.$el.querySelector('#conversationBox')
+    chatContainer.scrollTop = chatContainer.scrollHeight
   }
 }
 </script>
@@ -102,13 +118,13 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
-    .conversationBox{
+    #conversationBox{
       height: 70vh;
       width: 80%;
       border: 1px solid #21ade7;
       margin: 5px 0;
+      overflow-y: scroll;
       .messagesContainer{
-        overflow-y: scroll;
         .messageLine{
           text-align: left;
           margin-left: 5px;
