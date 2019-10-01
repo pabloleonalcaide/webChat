@@ -2,6 +2,7 @@ require './lib/errors/messageError'
 class CreateMessageService
   def initialize()
   end
+  # persist a messages on DB
   def self.saveMessage(user, room, message)
     begin
       Rails.logger.debug("Registrando mensaje: [ " + message + " ]")

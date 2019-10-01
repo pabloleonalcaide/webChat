@@ -8,7 +8,6 @@ class CreateRoomService
       Rails.logger.debug("Insertando sala " + roomName + " con id " + roomId)
       Room.create!(id: roomId, name: roomName)
     rescue
-      puts $!.message
       raise Errors::RoomExist
     end
   end

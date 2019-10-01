@@ -1,7 +1,6 @@
 require './lib/errors/messageError'
 module Messages
   class MessagesPostController < ApplicationController 
-  include Response
     def initialize(service)
       @messageService = service
     end

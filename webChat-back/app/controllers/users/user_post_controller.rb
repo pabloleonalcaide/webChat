@@ -1,13 +1,13 @@
 require './lib/errors/userExist'
 module Users
   class UserPostController < ApplicationController 
-  include Response
     # POST /user
     def initialize(service)
       @userService = service
     end
     def create
       begin
+
         userName = params[:name]
         userId = params[:id]
         @userService.saveUser(userName,userId)

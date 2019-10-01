@@ -3,6 +3,7 @@ require './app/models/room'
 class GetRoomsService
   def initialize()
   end
+  # return all the rooms
   def self.get(hasRooms = true)
     begin
       Rails.logger.debug('Recuperando salas disponibles')
