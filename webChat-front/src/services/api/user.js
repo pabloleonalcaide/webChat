@@ -1,26 +1,16 @@
-import axios from 'axios'
+import Vue from 'vue'
+import VueResource from 'vue-resource'
 import { uuid } from 'vue-uuid'
 
-const HTTP = axios.create({
-  baseURL: 'http://localhost:3000',
-  timeout: 100000,
-  headers: {
-    'Content-Type': 'application/json'
-  }
-})
+/** Vue Resource for Ajax Requests */
+Vue.use(VueResource)
+const baseURL = 'http://localhost:3000'
 
-const getUser = (id) => {
-  return HTTP.get('/user/' + id).then(response => {
-    return response.data
-  })
-}
 const createUser = (user) => {
-  return HTTP.post('/user/', user)
+  return Vue.http.post(baseURL + '/user/', user)
 }
-const deleteUser = (name) => {
-  return HTTP.delete('/user/', {name: name})
-}
+
 const formatUserMessage = (name) => {
   return JSON.parse('{"name": "' + name + '", "id": "' + uuid.v4() + '"}')
 }
-export { getUser, createUser, deleteUser, formatUserMessage }
+export { createUser, formatUserMessage }
