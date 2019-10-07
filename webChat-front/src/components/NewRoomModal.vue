@@ -46,6 +46,7 @@
 </template>
 <script>
 import { createRoom } from '../services/api/room'
+import { INVALD_ROOM_NAME_ERROR } from '../../statics/constants'
 import { uuid } from 'vue-uuid'
 export default {
   name: 'NewRoomModal',
@@ -75,7 +76,7 @@ export default {
           this.invalid = true
         })
       } else {
-        this.errorMessage = 'El nombre debe tener entre 5 y 20 caracteres'
+        this.errorMessage = INVALD_ROOM_NAME_ERROR
       }
     }
   }

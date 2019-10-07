@@ -31,6 +31,7 @@
 <script>
 import RoomNavbar from './layout/RoomNavbar'
 import { sendMessage, getLastMessages } from '../services/api/message'
+import { ROOM_WELCOME } from '../../statics/constants'
 import ActionCable from 'actioncable'
 
 export default {
@@ -92,7 +93,7 @@ export default {
         this.message_history = resp.message.reverse()
       }).catch(error => {
         console.error(error)
-        this.message_history = [{text: 'Bienvenido! esta sala aún está vacía!', room: this.roomName, user: 'roomManager'}]
+        this.message_history = [{text: ROOM_WELCOME, room: this.roomName, user: 'roomManager'}]
       })
     }
   },
