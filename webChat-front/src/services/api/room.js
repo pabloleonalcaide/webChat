@@ -1,22 +1,17 @@
-import axios from 'axios'
-const HTTP = axios.create({
-  baseURL: 'http://localhost:3000',
-  timeout: 100000,
-  headers: {
-    'Content-Type': 'application/json'
-  }
-})
+import Vue from 'vue'
+import VueResource from 'vue-resource'
+
+/** Vue Resource for Ajax Requests */
+Vue.use(VueResource)
+const baseURL = 'http://localhost:3000'
 
 const getRooms = () => {
-  return HTTP.get('/rooms').then(response => {
+  return Vue.http.get(baseURL + '/rooms').then(response => {
     return response.data
   })
 }
 const createRoom = (room) => {
-  return HTTP.post('/rooms/', room)
-}
-const deleteRoom = (name) => {
-  return HTTP.delete('/rooms/', {name: name})
+  return Vue.http.post(baseURL + '/rooms/', room)
 }
 
-export {getRooms, createRoom, deleteRoom}
+export {getRooms, createRoom}
