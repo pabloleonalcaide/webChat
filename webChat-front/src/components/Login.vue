@@ -19,6 +19,8 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import { createUser, formatUserMessage } from '../services/api/user'
+import { NO_USER_NAME_ERROR } from '../../static/constants'
+
 Vue.use(VueRouter)
 export default {
   name: 'login',
@@ -49,7 +51,7 @@ export default {
           this.errorMessage = error.response.data.message
         })
       } else {
-        this.errorMessage = 'Uno necesita un nombre'
+        this.errorMessage = NO_USER_NAME_ERROR
       }
     }
   }
