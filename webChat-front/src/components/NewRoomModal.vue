@@ -47,6 +47,7 @@
 <script>
 import { createRoom } from '../services/api/room'
 import { INVALD_ROOM_NAME_ERROR } from '../../static/constants'
+
 import { uuid } from 'vue-uuid'
 export default {
   name: 'NewRoomModal',
