@@ -19,7 +19,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import { createUser, formatUserMessage } from '../services/api/user'
-import { NO_USER_NAME_ERROR } from '../../statics/constants'
+import { NO_USER_NAME_ERROR } from '../../static/constants'
 
 Vue.use(VueRouter)
 export default {
