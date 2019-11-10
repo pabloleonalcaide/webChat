@@ -29,10 +29,11 @@
   </div>
 </template>
 <script>
+import ActionCable from 'actioncable'
 import RoomNavbar from './layout/RoomNavbar'
 import { sendMessage, getLastMessages } from '../services/api/message'
+import { redirect } from '../services/api/routes'
 import { ROOM_WELCOME } from '../../static/constants'
-import ActionCable from 'actioncable'
 
 export default {
   name: 'room',
@@ -52,7 +53,7 @@ export default {
     ensureUserExists () {
       let user = this.$store.getters.currentUser
       if (user === null || user === {}) {
-        this.$router.push('/')
+        redirect('/')
       }
     },
     sendMessage () {
@@ -80,7 +81,6 @@ export default {
             console.warn('disconnected')
           },
           received: (data) => {
-            console.log('received data')
             this.message_history.push(data)
             const chatContainer = this.$el.querySelector('#conversationBox')
             chatContainer.scrollTop = chatContainer.scrollHeight

@@ -16,12 +16,10 @@
     </div>
 </template>
 <script>
-import Vue from 'vue'
-import VueRouter from 'vue-router'
 import { createUser, formatUserMessage } from '../services/api/user'
-import { NO_USER_NAME_ERROR } from '../../static/constants'
+import { redirect } from '../services/api/routes'
+import { NO_USER_NAME_ERROR, HTTP_CREATED } from '../../static/constants'
 
-Vue.use(VueRouter)
 export default {
   name: 'login',
   data () {
@@ -35,13 +33,13 @@ export default {
   methods: {
     login () {
       let userName = this.userName
-      this.invalid = userName === ''
+      this.invalid = this.isValidUserName(userName)
       if (!this.invalid) {
         let currentUser = formatUserMessage(userName)
         createUser(currentUser).then(resp => {
-          if (resp.status === 201) {
+          if (HTTP_CREATED === resp.status) {
             this.$store.dispatch('setUser', currentUser)
-            this.$router.push('/rooms')
+            redirect('/rooms')
           } else {
             this.invalid = true
             this.errorMessage = resp.message
@@ -53,6 +51,9 @@ export default {
       } else {
         this.errorMessage = NO_USER_NAME_ERROR
       }
+    },
+    isValidUserName (userName) {
+      return userName.length <= 0
     }
   }
 }

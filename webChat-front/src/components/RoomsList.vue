@@ -21,9 +21,7 @@
 import RoomNavbar from './layout/RoomNavbar'
 import RoomElement from './RoomElement'
 import { getRooms } from '../services/api/room'
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-Vue.use(VueRouter)
+import { redirect } from '../services/api/routes'
 export default {
   name: 'RoomsList',
   components: {
@@ -50,7 +48,7 @@ export default {
     ensureUserExists () {
       let user = this.$store.getters.currentUser
       if (user === null || user === {}) {
-        this.$router.push('/')
+        redirect('/')
       }
     },
     closeModal () {
@@ -58,7 +56,7 @@ export default {
     },
     selectRoom (event) {
       this.$store.dispatch('setRoom', event)
-      this.$router.push('/room')
+      redirect('/room')
     }
   }
 }
