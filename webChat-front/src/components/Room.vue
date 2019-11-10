@@ -90,6 +90,7 @@ export default {
     },
     recoverMessages () {
       getLastMessages(this.roomName).then(resp => {
+        console.log(resp.message)
         this.message_history = resp.message.reverse()
       }).catch(error => {
         console.error(error)
