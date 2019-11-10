@@ -7,7 +7,6 @@ module Users
     end
     def create
       begin
-
         userName = params[:name]
         userId = params[:id]
         @userService.saveUser(userName,userId)

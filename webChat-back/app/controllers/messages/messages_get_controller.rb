@@ -13,7 +13,7 @@ module Messages
       rescue Errors::RoomNotFound
         e = Errors::RoomNotFound.new
         render :json => {message: e.message}, status: e.status
-      end    
+      end
     end
     
   end
