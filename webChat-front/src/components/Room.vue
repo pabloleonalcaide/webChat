@@ -32,7 +32,6 @@
 import ActionCable from 'actioncable'
 import RoomNavbar from './layout/RoomNavbar'
 import { sendMessage, getLastMessages } from '../services/api/message'
-
 import { redirect } from '../services/api/routes'
 import { ROOM_WELCOME } from '../../static/constants'
 
