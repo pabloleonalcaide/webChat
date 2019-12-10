@@ -9,6 +9,7 @@ class GetRoomsService
       Rails.logger.debug('Recuperando salas disponibles')
       Room.all
     rescue
+      Rails.logger.error('Error tratando de recuperar las salas disponibles')
       raise Errors::RoomsNotFound
     end
   end

@@ -8,6 +8,7 @@ class CreateUserService
       Rails.logger.debug("Registrando usuario " + userName)
       User.create!(name: userName, id: userId)
     rescue
+      Rails.logger.error("Error registrando usuario " + userName)
       raise Errors::UserExist
     end
   end
