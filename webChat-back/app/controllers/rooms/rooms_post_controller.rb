@@ -1,4 +1,6 @@
 require './lib/errors/roomExist'
+require './app/dto/roomDto'
+
 module Rooms
   class RoomsPostController < ApplicationController
     def initialize(service)
@@ -9,7 +11,8 @@ module Rooms
       begin
         roomName = params[:name]
         roomId = params[:id]
-        @roomService.saveRoom(roomId, roomName)
+        roomDto = Dto::RoomDto.new(roomId, roomName)
+        @roomService.saveRoom(roomDto)
         render :json => {message: roomName}, status: 201
       rescue Errors::RoomExist
         e = Errors::RoomExist.new

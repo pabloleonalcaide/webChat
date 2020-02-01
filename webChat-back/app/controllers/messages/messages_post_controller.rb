@@ -1,4 +1,6 @@
 require './lib/errors/messageError'
+require './app/dto/MessageDto'
+
 module Messages
   class MessagesPostController < ApplicationController 
     def initialize(service)
@@ -10,7 +12,8 @@ module Messages
         @user = params[:user]
         @room = params[:room]
         @message = params[:message]
-        @messageService.saveMessage(@user, @room, @message)
+        messageDto = Dto::MessageDto.new(@message,@room,@user)
+        @messageService.saveMessage(messageDto)
 
         ActionCable.server.broadcast("chat_channel_#{params[:room]}",
           user: @user, 

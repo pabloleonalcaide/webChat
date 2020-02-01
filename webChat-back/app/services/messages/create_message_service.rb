@@ -3,10 +3,11 @@ class CreateMessageService
   def initialize()
   end
   # persist a messages on DB
-  def self.saveMessage(user, room, message)
+  def self.saveMessage(messageDto)
     begin
-      Rails.logger.debug("Registrando mensaje: [ " + message + " ]")
-      Message.create!(text: message, room:room, user:user)
+      Rails.logger.debug("Registrando mensaje: [ " + messageDto.text + " ]")
+      
+      @repository.save(messageDto)
     rescue
       Rails.logger.errors("Error registrando un nuevo mensaje")
       raise Errors::MessageError
