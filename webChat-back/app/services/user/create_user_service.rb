@@ -10,11 +10,7 @@ class CreateUserService
       Rails.logger.debug("Registrando usuario " + userDto.name)
       @repository.save(userDto)
     rescue
-<<<<<<< HEAD
       Rails.logger.error("Error registrando usuario " + userDto.name)
-=======
-      Rails.logger.error("Error registrando usuario " + userName)
->>>>>>> Config Logs for Develop enviroment
       raise Errors::UserExist
     end
   end
