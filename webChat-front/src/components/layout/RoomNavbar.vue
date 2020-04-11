@@ -1,6 +1,6 @@
 <template>
   <nav>
-    <img src="../../assets/chat.png" v-on:click="backToRoot">
+    <img :src="chatLogo" v-on:click="backToRoot">
     <button
       class="addButton"
       type="button"
@@ -29,7 +29,8 @@ export default {
   props: ['context'],
   data () {
     return {
-      isModalVisible: false
+      isModalVisible: false,
+      chatLogo: require('@/assets/chat.png')
     }
   },
   methods: {
