@@ -12,16 +12,23 @@
               @click="login">
             Entrar</button>
         </div>
-        <p v-if="invalid" class="error-text">{{ errorMessage }}</p>
+        <ErrorMessage v-if="invalid"
+          :text="errorMessage"
+        >
+        </ErrorMessage>
     </div>
 </template>
 <script>
+import ErrorMessage from './ErrorMessage'
 import { createUser, formatUserMessage } from '../services/api/user'
 import { redirect } from '../services/api/routes'
 import { NO_USER_NAME_ERROR, HTTP_CREATED } from '../../static/constants'
 
 export default {
   name: 'login',
+  components: {
+    'ErrorMessage': ErrorMessage
+  },
   data () {
     return {
       userName: '',
@@ -62,9 +69,5 @@ export default {
 <style lang="scss" scoped>
   .chatLogo{
      width: 15%;
-  }
-  .error-text{
-    color: #b10202;
-    font-size: 0.8em;
   }
 </style>

@@ -16,9 +16,9 @@
         </header>
         <section class="modal-body">
           <input type="text" v-model.trim="roomName" placeholder="Sala...">
-          <p>
-            <span v-if="invalid" class="error-text">{{ errorMessage }}</span>
-          </p>
+        <ErrorMessage v-if="invalid"
+          :text="errorMessage"
+        >
         </section>
         <footer class="modal-footer">
           <slot name="footer">
@@ -45,11 +45,15 @@
   </transition>
 </template>
 <script>
+import ErrorMessage from './ErrorMessage'
 import { createRoom } from '../services/api/room'
 import { INVALD_ROOM_NAME_ERROR } from '../../static/constants'
 import { uuid } from 'vue-uuid'
 export default {
   name: 'NewRoomModal',
+  components: {
+    'ErrorMessage': ErrorMessage
+  },
   data () {
     return {
       roomName: '',
