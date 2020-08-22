@@ -11,6 +11,6 @@ const createUser = (user) => {
 }
 
 const formatUserMessage = (name) => {
-  return JSON.parse('{"name": "' + name + '", "id": "' + uuid.v4() + '"}')
+  return JSON.parse(`{"name": "${name}", "id": "${uuid.v4()}"}`)
 }
 export { createUser, formatUserMessage }

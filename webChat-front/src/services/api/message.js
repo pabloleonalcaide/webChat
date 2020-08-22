@@ -6,7 +6,7 @@ Vue.use(VueResource)
 const baseURL = 'http://localhost:3000'
 
 const formatMessage = (user, room, message) => {
-  return JSON.parse('{"user": "' + user + '", "room": "' + room + '", "message": "' + message + '"}')
+  return JSON.parse(`{"user": "${user}", "room": "${room}", "message": "${message}"}`)
 }
 
 const sendMessage = (user, room, message) => {

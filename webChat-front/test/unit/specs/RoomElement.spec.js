@@ -9,7 +9,7 @@ describe('RoomElement Component', () => {
     expect(element.findAll('.listElement').length).toBe(1)
   })
 
-    it('should emit the selectRoom event when button is clicked', () => {
+  it('should emit the selectRoom event when button is clicked', () => {
     const element = shallowMount(RoomElement)
     const button = element.find('button')
     button.trigger('click')
