@@ -25,9 +25,9 @@ describe('Room Component', () => {
     const stablishConnection = jest.fn()
     const roomComponent = shallowMount(Room, {
       methods: {stablishConnection},
-      store, 
+      store,
       localVue}
-      )
+    )
     roomComponent.setData({
       roomName: 'r1qwerty'
     })
