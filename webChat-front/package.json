@@ -15,7 +15,7 @@
   "dependencies": {
     "@vue/test-utils": "^1.0.0-beta.29",
     "actioncable-vue": "^1.3.0",
-    "axios": "^0.21.2",
+    "axios": "^0.28.0",
     "es6-promise": "^4.2.8",
     "node-sass": "^9.0.0",
     "sass-loader": "^7.1.0",
